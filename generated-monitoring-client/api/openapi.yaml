@@ -1,0 +1,765 @@
+openapi: 3.0.1
+info:
+  description: Спецификация API для чтения метрик Cloud Monitoring
+  title: Metrics API
+  version: 1.0.0
+servers:
+- url: https://mcs.mail.ru/v2/
+- url: http://mcs.mail.ru/v2/
+security:
+- keystone: []
+tags:
+- description: Пространства имен
+  name: namespaces
+- description: Заданный момент
+  name: instant
+- description: Заданный диапазон времени
+  name: rangequery
+- description: Поиск метрик по меткам
+  name: series
+- description: Имена меток
+  name: labels
+- description: Значения метки
+  name: labelvalues
+paths:
+  /namespaces:
+    get:
+      description: "Получить список [пространств имен](https://cloud.vk.com/docs/ru/monitoring-services/monitoring/concepts/architecture/#namespaces)\
+        \ (namespaces), которые можно использовать в запросах"
+      operationId: allowedNamespaces
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                example:
+                - default
+                - mcs/dbaas
+                - mcs/vm
+                - mcs/k8s
+                items:
+                  type: string
+                type: array
+          description: Список разрешенных пространств имен
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: Ошибка аутентификации
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: Внутренняя ошибка сервера
+      summary: Получить список разрешенных пространств имен
+      tags:
+      - namespaces
+      x-accepts: application/json
+  /{project_id}/query:
+    get:
+      description: Выполнить запрос значений метрик для заданного момента времени
+      operationId: InstantQuery
+      parameters:
+      - description: Идентификатор проекта (PID) в Openstack
+        in: path
+        name: project_id
+        required: true
+        schema:
+          type: string
+      - description: Пространство имен сервиса VK Cloud
+        in: query
+        name: namespace
+        schema:
+          default: default
+          type: string
+      - description: "Выражение запроса на языке [PromQL](https://prometheus.io/docs/prometheus/latest/querying/basics/)"
+        in: query
+        name: query
+        required: true
+        schema:
+          type: string
+      - description: "Момент времени, для которого запрашиваются значения метрик.\
+          \ Формат — RFC3339 или Unix timestamp. Если параметр не указан, использу\
+          ется текущий момент времени сервера"
+        in: query
+        name: time
+        schema:
+          type: string
+      - description: "Диапазон времени перед моментом time, в котором будет провед\
+          ен поиск значений метрик, если значения не будут найдены для момента time.\
+          \ Формат — [duration в языке PromQL](https://prometheus.io/docs/prometheus/latest/querying/basics/#time-durations)"
+        in: query
+        name: step
+        schema:
+          default: 5m
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getInstantQueryResponse'
+          description: Запрос выполнен успешно
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBadRequest'
+          description: Отсутствуют или неверно заданы параметры запроса
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: Ошибка аутентификации
+        "403":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: Ошибка авторизации
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: Внутренняя ошибка сервера
+        "502":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: Неверный шлюз (bad gateway)
+        "503":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: Сервис недоступен
+      summary: Получить метрики в момент времени (Instant query)
+      tags:
+      - instant
+      x-accepts: application/json
+  /{project_id}/query_range:
+    get:
+      description: Выполнить запрос значений метрик в заданном диапазоне времени
+      operationId: RangeQuery
+      parameters:
+      - description: Идентификатор проекта (PID) в Openstack
+        in: path
+        name: project_id
+        required: true
+        schema:
+          type: string
+      - description: Пространство имен сервиса VK Cloud
+        in: query
+        name: namespace
+        schema:
+          default: default
+          type: string
+      - description: "Выражение запроса на языке [PromQL](https://prometheus.io/docs/prometheus/latest/querying/basics/)"
+        in: query
+        name: query
+        required: true
+        schema:
+          type: string
+      - description: "Начало диапазона времени, для которого запрашиваются значени\
+          я метрик. Формат — RFC3339 или Unix timestamp"
+        in: query
+        name: start
+        required: true
+        schema:
+          type: string
+      - description: "Конец диапазона времени, для которого запрашиваются значения\
+          \ метрик. Формат — RFC3339 или Unix timestamp"
+        in: query
+        name: end
+        required: true
+        schema:
+          type: string
+      - description: "Шаг, с которым необходимо получить значения метрик в заданно\
+          м диапазоне времени. Формат — [duration в языке PromQL](https://prometheus.io/docs/prometheus/latest/querying/basics/#time-durations)"
+        in: query
+        name: step
+        schema:
+          type: string
+      - description: "Предельная длительность выполнения запроса. Формат — [duration\
+          \ в языке PromQL](https://prometheus.io/docs/prometheus/latest/querying/basics/#time-durations)"
+        in: query
+        name: timeout
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getRangeQueryResponse'
+          description: Запрос выполнен успешно
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBadRequest'
+          description: Отсутствуют или неверно заданы параметры запроса
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: Ошибка аутентификации
+        "403":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: Ошибка авторизации
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: Внутренняя ошибка сервера
+        "502":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: Неверный шлюз (bad gateway)
+        "503":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: Сервис недоступен
+      summary: Получить метрики в диапазоне времени (Range query)
+      tags:
+      - rangequery
+      x-accepts: application/json
+  /{project_id}/series:
+    get:
+      description: "Выполнить запрос списка метрик, которые [соответствуют заданно\
+        му фильтру](https://prometheus.io/docs/prometheus/latest/querying/api/#finding-series-by-label-matchers).\
+        \ Фильтр задается набором меток в виде пар имя/значение"
+      operationId: SeriesQuery
+      parameters:
+      - description: Идентификатор проекта (PID) в Openstack
+        in: path
+        name: project_id
+        required: true
+        schema:
+          type: string
+      - description: Пространство имен сервиса VK Cloud
+        in: query
+        name: namespace
+        schema:
+          default: default
+          type: string
+      - description: "Выражение для фильтра на языке [PromQL](https://prometheus.io/docs/prometheus/latest/querying/basics/).\
+          \ В выражении должна быть задана хотя бы одна метка для поиска подходящи\
+          х метрик"
+        explode: true
+        in: query
+        name: "match[]"
+        required: true
+        schema:
+          items:
+            type: string
+          type: array
+        style: form
+      - description: "Начало диапазона времени, в котором нужно провести поиск под\
+          ходящих метрик. Формат — RFC3339 или Unix timestamp"
+        in: query
+        name: start
+        schema:
+          type: string
+      - description: "Конец диапазона времени, в котором нужно провести поиск подх\
+          одящих метрик. Формат — RFC3339 или Unix timestamp"
+        in: query
+        name: end
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getSeriesQueryResponse'
+          description: Запрос выполнен успешно
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBadRequest'
+          description: Отсутствуют или неверно заданы параметры запроса
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: Ошибка аутентификации
+        "403":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: Ошибка авторизации
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: Внутренняя ошибка сервера
+        "502":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: Неверный шлюз (bad gateway)
+        "503":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: Сервис недоступен
+      summary: Получить список метрик по заданному фильтру (Series query)
+      tags:
+      - series
+      x-accepts: application/json
+  /{project_id}/labels:
+    get:
+      description: "Получить список имен меток. В качестве параметров могут быть у\
+        казаны селекторы метрик и/или диапазон времени, из которых нужно читать им\
+        ена меток"
+      operationId: Labels
+      parameters:
+      - description: Идентификатор проекта (PID) в Openstack
+        in: path
+        name: project_id
+        required: true
+        schema:
+          type: string
+      - description: Пространство имен сервиса VK Cloud
+        in: query
+        name: namespace
+        schema:
+          default: default
+          type: string
+      - description: "Выражение для фильтра на языке [PromQL](https://prometheus.io/docs/prometheus/latest/querying/basics/).\
+          \ Позволяет выбрать метрики, из которых будут считаны имена меток"
+        explode: true
+        in: query
+        name: "match[]"
+        schema:
+          items:
+            type: string
+          type: array
+        style: form
+      - description: "Начало диапазона времени, в котором нужно читать имена меток\
+          . Формат — RFC3339 или Unix timestamp"
+        in: query
+        name: start
+        schema:
+          type: string
+      - description: "Конец диапазона времени, в котором нужно читать имена меток\
+          . Формат — RFC3339 или Unix timestamp"
+        in: query
+        name: end
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getLabelsResponse'
+          description: Запрос выполнен успешно
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBadRequest'
+          description: Отсутствуют или неверно заданы параметры запроса
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: Ошибка аутентификации
+        "403":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: Ошибка авторизации
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: Внутренняя ошибка сервера
+        "502":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: Неверный шлюз (bad gateway)
+        "503":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: Сервис недоступен
+      summary: Получить список имен меток
+      tags:
+      - labels
+      x-accepts: application/json
+  /{project_id}/label/{label_name}/values:
+    get:
+      description: "Получить значения метки с заданным именем. В качестве параметр\
+        ов могут быть указаны селекторы метрик и/или диапазон времени, из которых\
+        \ нужно читать значения метки"
+      operationId: LabelValues
+      parameters:
+      - description: Идентификатор проекта (PID) в Openstack
+        in: path
+        name: project_id
+        required: true
+        schema:
+          type: string
+      - description: "Имя метки, значения которой нужно получить"
+        in: path
+        name: label_name
+        required: true
+        schema:
+          type: string
+      - description: Пространство имен сервиса VK Cloud
+        in: query
+        name: namespace
+        schema:
+          default: default
+          type: string
+      - description: "Выражение для фильтра на языке [PromQL](https://prometheus.io/docs/prometheus/latest/querying/basics/).\
+          \ Позволяет выбрать метрики, из которых будут считаны значения метки с з\
+          аданным именем"
+        explode: true
+        in: query
+        name: "match[]"
+        schema:
+          items:
+            type: string
+          type: array
+        style: form
+      - description: "Начало диапазона времени, в котором нужно читать значения ме\
+          тки. Формат — RFC3339 или Unix timestamp"
+        in: query
+        name: start
+        schema:
+          type: string
+      - description: "Конец диапазона времени, в котором нужно читать значения мет\
+          ки. Формат — RFC3339 или Unix timestamp"
+        in: query
+        name: end
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getLabelValuesResponse'
+          description: Запрос выполнен успешно
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBadRequest'
+          description: Отсутствуют или неверно заданы параметры запроса
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: Ошибка аутентификации
+        "403":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: Ошибка авторизации
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: Внутренняя ошибка сервера
+        "502":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: Неверный шлюз (bad gateway)
+        "503":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: Сервис недоступен
+      summary: Получить значения метки с заданным именем
+      tags:
+      - labelvalues
+      x-accepts: application/json
+components:
+  responses:
+    "400":
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/ErrorBadRequest'
+      description: Отсутствуют или неверно заданы параметры запроса
+    "401":
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/Error'
+      description: Ошибка аутентификации
+    "403":
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/Error'
+      description: Ошибка авторизации
+    "500":
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/Error'
+      description: Внутренняя ошибка сервера
+    "502":
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/Error'
+      description: Неверный шлюз (bad gateway)
+    "503":
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/Error'
+      description: Сервис недоступен
+  schemas:
+    Error:
+      description: Сообщение об ошибке
+      example:
+        message: message
+      properties:
+        message:
+          type: string
+      type: object
+    ErrorBadRequest:
+      description: Расширенное сообщение об ошибке
+      example:
+        errorType: errorType
+        error: error
+        status: status
+      properties:
+        status:
+          type: string
+        errorType:
+          type: string
+        error:
+          type: string
+      type: object
+    StatusResponse:
+      description: Статус работоспособности и версия сервиса
+      properties:
+        status:
+          example: success
+          type: string
+        version:
+          example: 1.0.0
+          type: string
+      type: object
+    resultType:
+      description: Тип результата выполнения запроса
+      enum:
+      - matrix
+      - vector
+      - scalar
+      - string
+      example: vector
+      type: string
+    status:
+      description: Статус выполнения запроса
+      enum:
+      - success
+      - error
+      example: success
+      type: string
+    getInstantQueryResponse:
+      description: Результат запроса метрик для заданного момента времени
+      example:
+        status: success
+        data:
+          resultType: vector
+          result:
+          - metric:
+              __name__: metric_query_test
+              test: instant_query_test
+            value:
+            - 1710496778
+            - "26"
+          - metric:
+              __name__: metric_query_test
+              test: instant_query_test_2
+            value:
+            - 1710496778
+            - "27"
+      properties:
+        status:
+          $ref: '#/components/schemas/status'
+        data:
+          $ref: '#/components/schemas/getInstantQueryResponse_data'
+      type: object
+    getRangeQueryResponse:
+      description: Результат запроса метрик для заданного диапазона времени
+      example:
+        status: success
+        data:
+          resultType: vector
+          result:
+          - metric:
+              __name__: metric_query_test
+              test: range_query_test
+            values:
+            - - 1710430800
+              - "871"
+            - - 1710430815
+              - "871"
+            - - 1710430830
+              - "871"
+          - metric:
+              __name__: metric_query_test
+              test: range_query_test_2
+            values:
+            - - 1710430800
+              - "870"
+            - - 1710430815
+              - "870"
+            - - 1710430830
+              - "870"
+      properties:
+        status:
+          $ref: '#/components/schemas/status'
+        data:
+          $ref: '#/components/schemas/getRangeQueryResponse_data'
+      type: object
+    getSeriesQueryResponse:
+      description: Результат поиска метрик по заданному набору меток
+      example:
+        status: success
+        data:
+        - __name__: up
+          job: prometheus
+          instance: localhost:9090
+        - __name__: up
+          job: node
+          instance: localhost:9091
+        - __name__: process_start_time_seconds
+          job: prometheus
+          instance: localhost:9090
+      properties:
+        status:
+          $ref: '#/components/schemas/status'
+        data:
+          description: Список метрик
+          items:
+            type: object
+          type: array
+      type: object
+    getLabelsResponse:
+      description: Результат запроса списка меток
+      example:
+        status: success
+        data:
+        - host
+        - application
+        - job
+        - http_code
+      properties:
+        status:
+          $ref: '#/components/schemas/status'
+        data:
+          description: Список меток
+          items:
+            type: string
+          type: array
+      type: object
+    getLabelValuesResponse:
+      description: Результат запроса значений заданной метки
+      example:
+        status: success
+        data:
+        - postgresql
+        - nginx
+        - node
+      properties:
+        status:
+          $ref: '#/components/schemas/status'
+        data:
+          description: Список значений метки
+          items:
+            type: string
+          type: array
+      type: object
+    getInstantQueryResponse_data_result_inner:
+      properties:
+        metric:
+          properties: {}
+          type: object
+        value:
+          items:
+            type: object
+          type: array
+      type: object
+    getInstantQueryResponse_data:
+      properties:
+        resultType:
+          $ref: '#/components/schemas/resultType'
+        result:
+          description: Метрики и их значения
+          items:
+            $ref: '#/components/schemas/getInstantQueryResponse_data_result_inner'
+          type: array
+      type: object
+    getRangeQueryResponse_data_result_inner:
+      properties:
+        metric:
+          properties: {}
+          type: object
+        values:
+          items:
+            items:
+              type: object
+            type: array
+          type: array
+      type: object
+    getRangeQueryResponse_data:
+      properties:
+        resultType:
+          $ref: '#/components/schemas/resultType'
+        result:
+          description: Метрики и их значения
+          items:
+            $ref: '#/components/schemas/getRangeQueryResponse_data_result_inner'
+          type: array
+      type: object
+  securitySchemes:
+    keystone:
+      in: header
+      name: X-Auth-Token
+      type: apiKey
+x-original-swagger-version: "2.0"
+
