@@ -11,7 +11,7 @@
 	<groupId>com.itmo.ipkn</groupId>
 	<artifactId>team6</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-    <packaging>pom</packaging>
+	<packaging>jar</packaging>
     <name>team6</name>
 	<description>Team 6 Software Engineering Project</description>
 	<url/>
@@ -29,8 +29,6 @@
 	</scm>
 	<properties>
 		<java.version>17</java.version>
-		<generated.vmManaging>generated-vm-managing-client</generated.vmManaging>
-		<generated.monitoring>generated-monitoring-client</generated.monitoring>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -47,10 +45,19 @@
 		</dependency>
 
 		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
+			<version>42.6.0</version>
 			<scope>runtime</scope>
 		</dependency>
+
+
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -115,47 +122,6 @@
 				</configuration>
 			</plugin>
 
-			<plugin>
-				<groupId>org.openapitools</groupId>
-				<artifactId>openapi-generator-maven-plugin</artifactId>
-				<version>7.4.0</version>
-				<executions>
-					<execution>
-						<id>${generated.vmManaging}</id>
-						<goals>
-							<goal>generate</goal>
-						</goals>
-						<configuration>
-							<inputSpec>${project.basedir}/src/main/resources/vk-cloud-vm-managing-spec.yaml</inputSpec>
-							<generatorName>java</generatorName>
-							<library>webclient</library>
-							<additionalProperties>
-								<useWebClient>true</useWebClient>
-								<dateLibrary>java8</dateLibrary>
-							</additionalProperties>
-							<output>${project.basedir}/${generated.vmManaging}</output>
-						</configuration>
-					</execution>
-
-					<execution>
-						<id>${generated.monitoring}</id>
-						<goals>
-							<goal>generate</goal>
-						</goals>
-						<configuration>
-							<inputSpec>${project.basedir}/src/main/resources/vk-cloud-monitoring-spec.yaml</inputSpec>
-							<generatorName>java</generatorName>
-							<library>webclient</library>
-							<additionalProperties>
-								<validateSpec>false</validateSpec>
-								<useWebClient>true</useWebClient>
-								<dateLibrary>java8</dateLibrary>
-							</additionalProperties>
-							<output>${project.basedir}/${generated.monitoring}</output>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
 		</plugins>
 	</build>
 
