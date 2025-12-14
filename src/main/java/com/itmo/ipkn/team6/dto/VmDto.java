@@ -8,4 +8,5 @@ public class VmDto {
     private String id;
 
     private String name;
+
 }

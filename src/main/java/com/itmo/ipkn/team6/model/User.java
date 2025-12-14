@@ -1,10 +1,7 @@
 package com.itmo.ipkn.team6.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
@@ -13,6 +10,7 @@ import java.time.LocalDateTime;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 @Table(name = "users")
 public class User {
 
@@ -21,6 +19,9 @@ public class User {
     private Long id;
 
     private String name;
+
+    @Column(name = "encrypted_password")
+    private String encryptedPassword;
 
     @Column(name = "created_at")
     private LocalDateTime createdAt;
