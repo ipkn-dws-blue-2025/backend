@@ -6,10 +6,10 @@ import lombok.Data;
 @Data
 public class UserRequestRegistrationDto {
 
-    @NotBlank
+    @NotBlank(message = "Имя пользователя не должно быть пустым.")
     private String username;
 
-    @NotBlank
+    @NotBlank(message = "Пароль не должен быть пустым.")
     private String password;
 
 }
