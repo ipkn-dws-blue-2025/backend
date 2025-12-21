@@ -15,3 +15,6 @@ spring:
 encryption:
   master-password: ${MASTER_PASSWORD}
   salt: ${SALT}
+
+springdoc:
+  override-with-generic-response: false
