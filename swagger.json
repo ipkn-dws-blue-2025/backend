@@ -1,0 +1,304 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "OpenAPI definition",
+    "version": "v0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080",
+      "description": "Generated server url"
+    }
+  ],
+  "paths": {
+    "/itmo/ipkn/team6/token/add": {
+      "post": {
+        "tags": [
+          "API для работы с токеном"
+        ],
+        "summary": "Добавить токен для пользователя.",
+        "description": "                     \n ### Описание:\n\n Добавление токена для пользователя.\n\n ",
+        "operationId": "addToken",
+        "parameters": [
+          {
+            "name": "X-User-Id",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "Token",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Токен успешно добавлен."
+          },
+          "500": {
+            "description": "Внутрення ошибка сервера.",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/itmo/ipkn/team6/api/get-vm-metric": {
+      "get": {
+        "tags": [
+          "API для базового мониторинга ВМ"
+        ],
+        "summary": "Получить базовые метрики по ВМ.",
+        "description": "                     \n ### Описание:\n Возвращает метрики по ВМ.\n \u003Cul\u003E\n   \u003Cli\u003EОбщая загрузка CPU в %\u003C/li\u003E\n   \u003Cli\u003EИспользуемая оперативная память в %\u003C/li\u003E\n   \u003Cli\u003EЗанятое место на диске в %\u003C/li\u003E\n   \u003Cli\u003EВремя сбора метрик\u003C/li\u003E\n \u003C/ul\u003E\n\n ",
+        "operationId": "getVmBaseDtoMetric",
+        "parameters": [
+          {
+            "name": "X-User-Id",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "Project-Id",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Vm-Id",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Метрика по ВМ успешно получена.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VmBaseMetricDto"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Токен от Vk Cloud недействителен.",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Токен пользователя не найден в БД.",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Недостаточно прав для совершения операции (проверьте правильность ввода параметров).",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Внутренняя ошибка сервера.",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/itmo/ipkn/team6/api/get-list-vms": {
+      "get": {
+        "tags": [
+          "API для базового мониторинга ВМ"
+        ],
+        "summary": "Получить список виртуальных машин",
+        "description": "                     \n ### Описание:\n Возвращает список всех виртуальных машин пользователя из VK Cloud.\n\n Каждая ВМ представляет следующим набором характеристик:\n \u003Cul\u003E\n   \u003Cli\u003EId ВМ внутри Vk Cloud.\u003C/li\u003E\n   \u003Cli\u003EИмя внутри Vk Cloud.\u003C/li\u003E\n   \u003Cli\u003EСтатус ВМ.\u003C/li\u003E\n   \u003Cli\u003EId проекта, в котором она располагается.\u003C/li\u003E\n \u003C/ul\u003E\n\n\n ",
+        "operationId": "getListOfVms",
+        "parameters": [
+          {
+            "name": "X-User-Id",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Список ВМ успешно получен",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VmBaseDtoList"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Токен от Vk Cloud недействителен.",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Токен пользователя не найден в БД.",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Недостаточно прав для совершения операции (проверьте правильность ввода параметров).",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Внутренняя ошибка сервера.",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ErrorDto": {
+        "type": "object",
+        "properties": {
+          "timestamp": {
+            "type": "string",
+            "description": "Время и дата ошибки.",
+            "format": "date-time"
+          },
+          "message": {
+            "type": "string",
+            "description": "Сообщение ошибки."
+          }
+        },
+        "description": "Общий формат ошибок."
+      },
+      "VmBaseMetricDto": {
+        "type": "object",
+        "properties": {
+          "cpuLoadPercent": {
+            "type": "number",
+            "description": "Общая загрузка CPU в %.",
+            "format": "double"
+          },
+          "ramUsedPercent": {
+            "type": "number",
+            "description": "Используемая оперативная память в %.",
+            "format": "double"
+          },
+          "diskUsedPercent": {
+            "type": "number",
+            "description": "Занятое место на основном диске в %.",
+            "format": "double"
+          },
+          "timestamp": {
+            "type": "string",
+            "description": "Время сбора метрик",
+            "format": "date-time"
+          }
+        },
+        "description": "Базовое DTO для метрик ВМ."
+      },
+      "VmBaseDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Id ВМ внутри Vk Cloud."
+          },
+          "name": {
+            "type": "string",
+            "description": "Имя ВМ внутри Vk Cloud."
+          },
+          "status": {
+            "type": "string",
+            "description": "Возможные статусы виртуальной машины. SHUTOFF - выключена. ACTIVE - включена.",
+            "enum": [
+              "SHUTOFF",
+              "ACTIVE"
+            ]
+          },
+          "projectId": {
+            "type": "string",
+            "description": "Id проекта, в котором находится ВМ."
+          }
+        },
+        "description": "Базовое DTO для ВМ."
+      },
+      "VmBaseDtoList": {
+        "type": "object",
+        "properties": {
+          "servers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VmBaseDto"
+            }
+          }
+        },
+        "description": "Список ВМ с базовой информацией о них."
+      }
+    }
+  }
+}
