@@ -43,7 +43,7 @@
             "description": "Токен успешно добавлен."
           },
           "500": {
-            "description": "Внутрення ошибка сервера.",
+            "description": "Внутренняя ошибка сервера.",
             "content": {
               "*/*": {
                 "schema": {
@@ -55,10 +55,198 @@
         }
       }
     },
-    "/itmo/ipkn/team6/api/get-vm-metric": {
+    "/itmo/ipkn/team6/api/control/shutoffVm": {
+      "post": {
+        "tags": [
+          "API для управления ВМ"
+        ],
+        "summary": "Остановить работу ВМ в Vk Cloud.",
+        "description": "                     \n ### Описание:\n\n Останавливает работу ВМ в Vk Cloud.\n\n ",
+        "operationId": "shutoffVm",
+        "parameters": [
+          {
+            "name": "X-User-Id",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "Vm-Id",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Запрос принят в обработку."
+          },
+          "409": {
+            "description": "Попытка выключить ВМ, когда она уже выключена.",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Токен от Vk Cloud недействителен.",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Токен пользователя не найден в БД.",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Недостаточно прав для совершения операции.",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Не найдена данная ВМ.",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Внутренняя ошибка сервера.",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/itmo/ipkn/team6/api/control/activeVm": {
+      "post": {
+        "tags": [
+          "API для управления ВМ"
+        ],
+        "summary": "Включить остановленную ВМ в VK Cloud.",
+        "description": "                     \n ### Описание:\n\n Включает остановленную ВМ в VK Cloud.\n\n ",
+        "operationId": "activeVm",
+        "parameters": [
+          {
+            "name": "X-User-Id",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "Vm-Id",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Запрос принят в обработку."
+          },
+          "409": {
+            "description": "Попытка включить ВМ, когда она уже включена.",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Токен от Vk Cloud недействителен.",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Токен пользователя не найден в БД.",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Недостаточно прав для совершения операции.",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Не найдена данная ВМ.",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Внутренняя ошибка сервера.",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/itmo/ipkn/team6/api/monitoring/get-vm-metric": {
       "get": {
         "tags": [
-          "API для базового мониторинга ВМ"
+          "API для мониторинга ВМ"
         ],
         "summary": "Получить базовые метрики по ВМ.",
         "description": "                     \n ### Описание:\n Возвращает метрики по ВМ.\n \u003Cul\u003E\n   \u003Cli\u003EОбщая загрузка CPU в %\u003C/li\u003E\n   \u003Cli\u003EИспользуемая оперативная память в %\u003C/li\u003E\n   \u003Cli\u003EЗанятое место на диске в %\u003C/li\u003E\n   \u003Cli\u003EВремя сбора метрик\u003C/li\u003E\n \u003C/ul\u003E\n\n ",
@@ -144,10 +332,10 @@
         }
       }
     },
-    "/itmo/ipkn/team6/api/get-list-vms": {
+    "/itmo/ipkn/team6/api/monitoring/get-list-vms": {
       "get": {
         "tags": [
-          "API для базового мониторинга ВМ"
+          "API для мониторинга ВМ"
         ],
         "summary": "Получить список виртуальных машин",
         "description": "                     \n ### Описание:\n Возвращает список всех виртуальных машин пользователя из VK Cloud.\n\n Каждая ВМ представляет следующим набором характеристик:\n \u003Cul\u003E\n   \u003Cli\u003EId ВМ внутри Vk Cloud.\u003C/li\u003E\n   \u003Cli\u003EИмя внутри Vk Cloud.\u003C/li\u003E\n   \u003Cli\u003EСтатус ВМ.\u003C/li\u003E\n   \u003Cli\u003EId проекта, в котором она располагается.\u003C/li\u003E\n \u003C/ul\u003E\n\n\n ",

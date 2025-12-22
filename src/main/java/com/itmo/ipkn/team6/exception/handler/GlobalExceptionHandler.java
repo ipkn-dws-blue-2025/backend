@@ -1,8 +1,6 @@
 package com.itmo.ipkn.team6.exception.handler;
 
-import com.itmo.ipkn.team6.exception.NotFoundToken;
-import com.itmo.ipkn.team6.exception.VkCloudForbiddenException;
-import com.itmo.ipkn.team6.exception.VkCloudUnauthorizedException;
+import com.itmo.ipkn.team6.exception.*;
 import com.itmo.ipkn.team6.exception.dto.ErrorDto;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
@@ -41,6 +39,28 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(VkCloudForbiddenException.class)
     @ResponseStatus(HttpStatus.FORBIDDEN)
     public ErrorDto handleVkCloudForbiddenException(VkCloudForbiddenException ex) {
+
+        return ErrorDto.builder()
+                .message(ex.getMessage())
+                .timestamp(LocalDateTime.now())
+                .build();
+
+    }
+
+    @ExceptionHandler(VkCloudConflictException.class)
+    @ResponseStatus(HttpStatus.CONFLICT)
+    public ErrorDto handleVkCloudConflictException(VkCloudConflictException ex) {
+
+        return ErrorDto.builder()
+                .message(ex.getMessage())
+                .timestamp(LocalDateTime.now())
+                .build();
+
+    }
+
+    @ExceptionHandler(VkCloudNotFoundException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public ErrorDto handleVkCloudNotFoundException(VkCloudNotFoundException ex) {
 
         return ErrorDto.builder()
                 .message(ex.getMessage())

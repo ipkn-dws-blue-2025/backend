@@ -1,53 +1,47 @@
 package com.itmo.ipkn.team6.controller;
 
-import com.itmo.ipkn.team6.dto.VmBaseDtoList;
-import com.itmo.ipkn.team6.dto.VmBaseMetricDto;
 import com.itmo.ipkn.team6.exception.dto.ErrorDto;
-import com.itmo.ipkn.team6.service.VMBaseMonitoringService;
+import com.itmo.ipkn.team6.service.VmControlService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
+/**
+ * Контроллер для управления состоянием ВМ в Vk Cloud.
+ */
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/itmo/ipkn/team6/api")
-@Tag(name = "API для базового мониторинга ВМ")
-public class VMBaseMonitoringController {
+@RequestMapping("/itmo/ipkn/team6/api/control")
+@Tag(name = "API для управления ВМ")
+public class VmControlController {
 
-    private final VMBaseMonitoringService vmBaseMonitoringService;
+    private final VmControlService vmControlService;
 
-    @GetMapping("/get-list-vms")
     @Operation(
-            summary = "Получить список виртуальных машин",
+            summary = "Остановить работу ВМ в Vk Cloud.",
             description = """
                                         \s
                      ### Описание:
-                     Возвращает список всех виртуальных машин пользователя из VK Cloud.
                      
-                     Каждая ВМ представляет следующим набором характеристик:
-                     <ul>
-                       <li>Id ВМ внутри Vk Cloud.</li>
-                       <li>Имя внутри Vk Cloud.</li>
-                       <li>Статус ВМ.</li>
-                       <li>Id проекта, в котором она располагается.</li>
-                     </ul>
-                     
+                     Останавливает работу ВМ в Vk Cloud.
 
                     \s""",
             responses = {
                     @ApiResponse(
-                            responseCode = "200",
-                            description = "Список ВМ успешно получен",
+                            responseCode = "202",
+                            description = "Запрос принят в обработку.",
+                            content = @Content
+                    ),
+                    @ApiResponse(
+                            responseCode = "409",
+                            description = "Попытка выключить ВМ, когда она уже выключена.",
                             content = @Content(
-                                    mediaType = "application/json",
-                                    schema = @Schema(implementation = VmBaseDtoList.class)
+                                    schema = @Schema(implementation = ErrorDto.class)
                             )
                     ),
                     @ApiResponse(
@@ -66,7 +60,14 @@ public class VMBaseMonitoringController {
                     ),
                     @ApiResponse(
                             responseCode = "403",
-                            description = "Недостаточно прав для совершения операции (проверьте правильность ввода параметров).",
+                            description = "Недостаточно прав для совершения операции.",
+                            content = @Content(
+                                    schema = @Schema(implementation = ErrorDto.class)
+                            )
+                    ),
+                    @ApiResponse(
+                            responseCode = "404",
+                            description = "Не найдена данная ВМ.",
                             content = @Content(
                                     schema = @Schema(implementation = ErrorDto.class)
                             )
@@ -80,33 +81,34 @@ public class VMBaseMonitoringController {
                     )
             }
     )
-    public VmBaseDtoList getListOfVms(@RequestHeader("X-User-Id") Long userId) {
+    @PostMapping("/shutoffVm")
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    public void shutoffVm(@RequestHeader("X-User-Id") Long userId, @RequestHeader("Vm-Id") String vmId) {
 
-        return vmBaseMonitoringService.getListOfVms(userId);
+        vmControlService.shutoffVm(userId, vmId);
 
     }
 
     @Operation(
-            summary = "Получить базовые метрики по ВМ.",
+            summary = "Включить остановленную ВМ в VK Cloud.",
             description = """
                                         \s
                      ### Описание:
-                     Возвращает метрики по ВМ.
-                     <ul>
-                       <li>Общая загрузка CPU в %</li>
-                       <li>Используемая оперативная память в %</li>
-                       <li>Занятое место на диске в %</li>
-                       <li>Время сбора метрик</li>
-                     </ul>
+                     
+                     Включает остановленную ВМ в VK Cloud.
 
                     \s""",
             responses = {
                     @ApiResponse(
-                            responseCode = "200",
-                            description = "Метрика по ВМ успешно получена.",
+                            responseCode = "202",
+                            description = "Запрос принят в обработку.",
+                            content = @Content
+                    ),
+                    @ApiResponse(
+                            responseCode = "409",
+                            description = "Попытка включить ВМ, когда она уже включена.",
                             content = @Content(
-                                    mediaType = "application/json",
-                                    schema = @Schema(implementation = VmBaseMetricDto.class)
+                                    schema = @Schema(implementation = ErrorDto.class)
                             )
                     ),
                     @ApiResponse(
@@ -125,7 +127,14 @@ public class VMBaseMonitoringController {
                     ),
                     @ApiResponse(
                             responseCode = "403",
-                            description = "Недостаточно прав для совершения операции (проверьте правильность ввода параметров).",
+                            description = "Недостаточно прав для совершения операции.",
+                            content = @Content(
+                                    schema = @Schema(implementation = ErrorDto.class)
+                            )
+                    ),
+                    @ApiResponse(
+                            responseCode = "404",
+                            description = "Не найдена данная ВМ.",
                             content = @Content(
                                     schema = @Schema(implementation = ErrorDto.class)
                             )
@@ -139,12 +148,12 @@ public class VMBaseMonitoringController {
                     )
             }
     )
-    @GetMapping("/get-vm-metric")
-    public VmBaseMetricDto getVmBaseDtoMetric(@RequestHeader("X-User-Id") Long userId, @RequestHeader("Project-Id") String projectId, @RequestHeader("Vm-Id") String vmId) {
+    @PostMapping("/activeVm")
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    public void activeVm(@RequestHeader("X-User-Id") Long userId, @RequestHeader("Vm-Id") String vmId) {
 
-        return vmBaseMonitoringService.getVmBaseMetric(userId, projectId, vmId);
+        vmControlService.activeVm(userId, vmId);
 
     }
-
 
 }

@@ -38,7 +38,7 @@ public class TokenController {
                     ),
                     @ApiResponse(
                             responseCode = "500",
-                            description = "Внутрення ошибка сервера.",
+                            description = "Внутренняя ошибка сервера.",
                             content = @Content(
                                     schema = @Schema(implementation = ErrorDto.class)
                             )

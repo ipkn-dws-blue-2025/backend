@@ -17,8 +17,7 @@ import java.time.LocalDateTime;
 
 @Service
 @RequiredArgsConstructor
-//TODO: добавить расшифровку токена с помощью методов из Spring Security
-public class VMBaseMonitoringService {
+public class VmMonitoringService {
 
     private final VkCloudTokenJpaRepository vkCloudTokenJpaRepository;
     private final VmControlApiClient vmControlApiClient;
