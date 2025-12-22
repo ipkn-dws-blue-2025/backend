@@ -1,4 +1,4 @@
-package com.itmo.ipkn.team6.service;
+package com.itmo.ipkn.team6.service.impl;
 
 
 import com.itmo.ipkn.team6.client.VmBaseMonitoringApiClient;
@@ -7,13 +7,14 @@ import com.itmo.ipkn.team6.exception.NotFoundToken;
 import com.itmo.ipkn.team6.exception.UnAuthorizedException;
 import com.itmo.ipkn.team6.model.VkCloudToken;
 import com.itmo.ipkn.team6.repository.VkCloudTokenJpaRepository;
+import com.itmo.ipkn.team6.service.MetricsChecker;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class VMBaseMonitoringService {
+public class VMBaseMonitoringService implements MetricsChecker {
 
     private final VkCloudTokenJpaRepository vkCloudTokenJpaRepository;
     private final VmBaseMonitoringApiClient vmBaseMonitoringApiClient;
@@ -30,17 +31,25 @@ public class VMBaseMonitoringService {
     }
 
     private Long checkSessionForAuthorized(HttpSession httpSession) {
-
-
         if (httpSession == null || httpSession.getAttribute("userId") == null) {
-
             throw new UnAuthorizedException();
-
         }
-
         return (Long) httpSession.getAttribute("userId");
-
     }
 
+    public boolean checkRamMetric() {
+        return false;
+    }
 
+    public boolean checkDiskMetric() {
+        return false;
+    }
+
+    public boolean checkCpuMetric() {
+        return false;
+    }
+
+    public boolean checkNetworkMetric() {
+        return false;
+    }
 }

@@ -4,7 +4,7 @@ import com.itmo.ipkn.team6.auth.dto.UserRequestRegistrationDto;
 import com.itmo.ipkn.team6.exception.UserAlreadyExistsException;
 import com.itmo.ipkn.team6.model.User;
 import com.itmo.ipkn.team6.repository.UserJpaRepository;
-import com.itmo.ipkn.team6.service.ServiceEncrypt;
+import com.itmo.ipkn.team6.service.impl.ServiceEncrypt;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
