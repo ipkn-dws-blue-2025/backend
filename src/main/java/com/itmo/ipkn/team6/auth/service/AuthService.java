@@ -5,6 +5,7 @@ import com.itmo.ipkn.team6.exception.UserAlreadyExistsException;
 import com.itmo.ipkn.team6.model.User;
 import com.itmo.ipkn.team6.repository.UserJpaRepository;
 import com.itmo.ipkn.team6.service.impl.ServiceEncrypt;
+import com.itmo.ipkn.team6.util.SessionHolder;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -31,6 +32,7 @@ public class AuthService {
                 .updatedAt(LocalDateTime.now())
                 .build();
 
+        SessionHolder.activeUserIds.add(user.getId());
         userJpaRepository.save(user);
     }
 }

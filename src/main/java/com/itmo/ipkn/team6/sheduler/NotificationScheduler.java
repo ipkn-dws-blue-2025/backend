@@ -17,7 +17,6 @@ import java.util.List;
 @RequiredArgsConstructor
 public class NotificationScheduler {
 
-
     private final UserJpaRepository userJpaRepository;
     private final VMBaseMonitoringService monitoringService;
 
