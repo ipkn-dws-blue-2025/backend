@@ -1,7 +1,7 @@
 package com.itmo.ipkn.team6.dto.rest;
 
+import com.itmo.ipkn.team6.model.util.MetricThresholdType;
 import lombok.*;
-import org.springframework.jmx.support.MetricType;
 
 import java.util.List;
 
@@ -22,7 +22,7 @@ public class ThresholdSettingsRequest {
     public static class Setting {
 
         private Long id;
-        private MetricType metricType;
+        private MetricThresholdType metricType;
         private String thresholdValue;
     }
 }
