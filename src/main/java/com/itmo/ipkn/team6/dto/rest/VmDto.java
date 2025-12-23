@@ -1,4 +1,4 @@
-package com.itmo.ipkn.team6.dto;
+package com.itmo.ipkn.team6.dto.rest;
 
 import lombok.Data;
 

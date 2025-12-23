@@ -18,8 +18,6 @@ public class AuthService {
     private final UserJpaRepository userJpaRepository;
 
     public void registerUser(UserRequestRegistrationDto userRequestRegistration) {
-
-
         boolean isExistsUser = userJpaRepository.existsByName(userRequestRegistration.getUsername());
 
         if (isExistsUser) {
@@ -34,7 +32,5 @@ public class AuthService {
                 .build();
 
         userJpaRepository.save(user);
-
     }
-
 }
