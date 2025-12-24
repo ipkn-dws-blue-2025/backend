@@ -32,7 +32,7 @@ public class AuthService {
                 .updatedAt(LocalDateTime.now())
                 .build();
 
-        SessionHolder.activeUserIds.add(user.getId());
-        userJpaRepository.save(user);
+        User savedUser = userJpaRepository.save(user);
+        SessionHolder.activeUserIds.add(savedUser.getId());
     }
 }
