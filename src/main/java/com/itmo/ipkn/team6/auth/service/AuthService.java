@@ -4,7 +4,8 @@ import com.itmo.ipkn.team6.auth.dto.UserRequestRegistrationDto;
 import com.itmo.ipkn.team6.exception.UserAlreadyExistsException;
 import com.itmo.ipkn.team6.model.User;
 import com.itmo.ipkn.team6.repository.UserJpaRepository;
-import com.itmo.ipkn.team6.service.ServiceEncrypt;
+import com.itmo.ipkn.team6.service.impl.ServiceEncrypt;
+import com.itmo.ipkn.team6.util.SessionHolder;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -18,8 +19,6 @@ public class AuthService {
     private final UserJpaRepository userJpaRepository;
 
     public void registerUser(UserRequestRegistrationDto userRequestRegistration) {
-
-
         boolean isExistsUser = userJpaRepository.existsByName(userRequestRegistration.getUsername());
 
         if (isExistsUser) {
@@ -33,8 +32,7 @@ public class AuthService {
                 .updatedAt(LocalDateTime.now())
                 .build();
 
-        userJpaRepository.save(user);
-
+        User savedUser = userJpaRepository.save(user);
+        SessionHolder.activeUserIds.add(savedUser.getId());
     }
-
 }
