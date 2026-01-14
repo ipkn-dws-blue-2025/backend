@@ -1,4 +1,4 @@
-package com.itmo.ipkn.team6.service;
+package com.itmo.ipkn.team6.service.impl;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.encrypt.Encryptors;
@@ -15,18 +15,12 @@ public class ServiceEncrypt {
     private String salt;
 
     public String encrypt(String message) {
-
         TextEncryptor textEncryptor = Encryptors.text(masterPassword, salt);
         return textEncryptor.encrypt(message);
-
     }
 
     public String decrypt(String encryptedMessage) {
-
         TextEncryptor textEncryptor = Encryptors.text(masterPassword, salt);
         return textEncryptor.decrypt(encryptedMessage);
-
     }
-
-
 }
