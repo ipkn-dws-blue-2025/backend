@@ -2,6 +2,7 @@ package com.itmo.ipkn.team6.service;
 
 import com.itmo.ipkn.team6.model.VkCloudToken;
 import com.itmo.ipkn.team6.repository.VkCloudTokenJpaRepository;
+import com.itmo.ipkn.team6.service.impl.ServiceEncrypt;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
