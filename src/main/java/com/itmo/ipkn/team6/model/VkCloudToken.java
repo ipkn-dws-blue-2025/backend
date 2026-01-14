@@ -18,14 +18,10 @@ public class VkCloudToken {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "encrypted_token")
+    @Column(name = "encrypted_token", columnDefinition = "TEXT")
     private String encryptedToken;
 
-    @OneToOne
-    @JoinColumn(
-            unique = true,
-            nullable = false
-    )
-    private User user;
+    @Column(name = "user_id")
+    private Long userId;
 
 }
