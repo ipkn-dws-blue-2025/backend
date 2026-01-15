@@ -21,6 +21,7 @@ spring:
 encryption:
   master-password: ${MASTER_PASSWORD}
   salt: ${SALT}
+  jwt-key: ${JWT_KEY:mySuperSecretKeyThatIsAtLeast32CharactersLong123!}
 
 springdoc:
   override-with-generic-response: false

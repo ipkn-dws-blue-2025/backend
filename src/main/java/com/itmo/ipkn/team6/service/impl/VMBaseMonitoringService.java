@@ -48,7 +48,7 @@ public class VMBaseMonitoringService implements MetricsChecker {
         VkCloudToken cloudToken = vkCloudTokenJpaRepository.findByUserId(user.getId()).orElseThrow(() -> new NotFoundToken("Ваш токен для Vk Cloud не найден. Пожалуйста, добавьте токен."));
 
         VmMonitoringResponse instantUsage = vmMonitoringCloudApiClient.getForInstantUsage(
-                serviceEncrypt.decrypt(cloudToken.getEncryptedToken()),
+                serviceEncrypt.decrypt(cloudToken.getEncryptedAdminToken()),
                 projectId,
                 String.format(metric.getPattern(), vmUuid),
                 namespace
