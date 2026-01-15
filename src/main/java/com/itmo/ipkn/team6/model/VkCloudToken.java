@@ -19,7 +19,7 @@ public class VkCloudToken {
     private Long id;
 
     @Column(name = "encrypted_token", columnDefinition = "TEXT")
-    private String encryptedToken;
+    private String encryptedAdminToken;
 
     @Column(name = "user_id")
     private Long userId;

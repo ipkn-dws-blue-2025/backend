@@ -69,6 +69,17 @@ public class GlobalExceptionHandler {
 
     }
 
+    @ExceptionHandler(InvalidJwtTokenException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public ErrorDto handleInvalidJwtTokenException(InvalidJwtTokenException ex) {
+
+        return ErrorDto.builder()
+                .message(ex.getMessage())
+                .timestamp(LocalDateTime.now())
+                .build();
+
+    }
+
     @ExceptionHandler(RuntimeException.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public ErrorDto handleRuntimeException(RuntimeException ex) {
