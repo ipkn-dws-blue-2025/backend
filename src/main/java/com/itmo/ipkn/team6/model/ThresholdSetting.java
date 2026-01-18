@@ -27,4 +27,13 @@ public class ThresholdSetting {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private User user;
+
+    @Column(nullable = false)
+    private String vmId;
+
+    @Column(nullable = false)
+    private String projectId;
+
+    @Column(nullable = false)
+    private String namespace;
 }

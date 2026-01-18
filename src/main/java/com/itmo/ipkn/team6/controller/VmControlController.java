@@ -2,6 +2,7 @@ package com.itmo.ipkn.team6.controller;
 
 import com.itmo.ipkn.team6.exception.dto.ErrorDto;
 import com.itmo.ipkn.team6.service.VmControlService;
+import com.itmo.ipkn.team6.util.Constants;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -16,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/itmo/ipkn/team6/api/control")
+@RequestMapping(Constants.Controller.CONTROL_API)
 @Tag(name = "API для управления ВМ")
 public class VmControlController {
 
@@ -84,9 +85,7 @@ public class VmControlController {
     @PostMapping("/shutoffVm")
     @ResponseStatus(HttpStatus.ACCEPTED)
     public void shutoffVm(@RequestHeader("X-User-Id") Long userId, @RequestHeader("Vm-Id") String vmId) {
-
         vmControlService.shutoffVm(userId, vmId);
-
     }
 
     @Operation(
@@ -151,12 +150,6 @@ public class VmControlController {
     @PostMapping("/activeVm")
     @ResponseStatus(HttpStatus.ACCEPTED)
     public void activeVm(@RequestHeader("X-User-Id") Long userId, @RequestHeader("Vm-Id") String vmId) {
-
         vmControlService.activeVm(userId, vmId);
-
     }
-
-
-
-
 }

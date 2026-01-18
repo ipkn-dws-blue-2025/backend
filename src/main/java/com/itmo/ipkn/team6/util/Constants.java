@@ -14,6 +14,8 @@ public interface Constants {
 
     interface Controller {
         String BASE_API_PATH = "/itmo/ipkn/team6/api";
+        String CONTROL_API = BASE_API_PATH + "/control";
+        String THRESHOLD_SETTINGS_API = BASE_API_PATH + "/threshold-setting";
         String AUTH = "/itmo/ipkn/team6/auth";
     }
 }

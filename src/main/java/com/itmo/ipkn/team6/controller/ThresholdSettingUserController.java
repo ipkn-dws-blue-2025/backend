@@ -12,25 +12,40 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping(Constants.Controller.BASE_API_PATH)
+@RequestMapping(Constants.Controller.THRESHOLD_SETTINGS_API)
 public class ThresholdSettingUserController {
 
     private final ThresholdSettingUserService thresholdSettingUserService;
 
-    @GetMapping("/threshold-setting/{userId}")
-    public List<ThresholdSettingResponse> getSettingsForUser(@PathVariable long userId) {
+    @GetMapping("/")
+    public List<ThresholdSettingResponse> getSettingsForUser(
+            @RequestHeader("X-User-Id") Long userId,
+            @RequestHeader("Vm-Id") String vmId
+    ) {
         return thresholdSettingUserService.getSettingsForUser(userId);
     }
 
-    @PostMapping("/threshold-setting/{userId}")
-    public ResponseEntity<Void> createSettingsForUser(@PathVariable long userId, @RequestBody ThresholdSettingsRequest thresholdSettingsRequest) {
-        thresholdSettingUserService.createSettingsForUser(userId, thresholdSettingsRequest);
+    @PostMapping("/")
+    public ResponseEntity<Void> createSettingsForUser(
+            @RequestHeader("X-User-Id") Long userId,
+            @RequestHeader("Vm-Id") String vmId,
+            @RequestHeader("Project-id") String projectId,
+            @RequestHeader("Namespace") String namespace,
+            @RequestBody ThresholdSettingsRequest thresholdSettingsRequest
+    ) {
+        thresholdSettingUserService.createSettingsForUser(userId, vmId, projectId, namespace, thresholdSettingsRequest);
         return ResponseEntity.ok().build();
     }
 
-    @PutMapping("/threshold-setting/{userId}")
-    public ResponseEntity<Void> changeSettingsForUser(@PathVariable long userId, @RequestBody ThresholdSettingsRequest thresholdSettingsRequest) {
-        thresholdSettingUserService.changeSettingsForUser(userId, thresholdSettingsRequest);
+    @PutMapping("/")
+    public ResponseEntity<Void> changeSettingsForUser(
+            @RequestHeader("X-User-Id") Long userId,
+            @RequestHeader("Vm-Id") String vmId,
+            @RequestHeader("Project-id") String projectId,
+            @RequestHeader("Namespace") String namespace,
+            @RequestBody ThresholdSettingsRequest thresholdSettingsRequest
+    ) {
+        thresholdSettingUserService.changeSettingsForUser(userId, vmId, projectId, namespace, thresholdSettingsRequest);
         return ResponseEntity.ok().build();
     }
 }

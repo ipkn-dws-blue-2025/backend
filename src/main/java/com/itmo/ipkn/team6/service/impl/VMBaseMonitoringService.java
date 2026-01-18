@@ -15,11 +15,12 @@ import com.itmo.ipkn.team6.repository.VkCloudTokenJpaRepository;
 import com.itmo.ipkn.team6.service.MetricsChecker;
 import com.itmo.ipkn.team6.service.NotificationService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Value;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class VMBaseMonitoringService implements MetricsChecker {
@@ -34,43 +35,40 @@ public class VMBaseMonitoringService implements MetricsChecker {
     private final VmBaseCloudApiClient vmBaseCloudApiClient;
     private final VmMonitoringCloudApiClient vmMonitoringCloudApiClient;
 
-    @Value("${projectId:unknown}")
-    private String projectId;
-    @Value("${namespace:unknown}")
-    private String namespace;
-    @Value("${vmUuid:unknown}")
-    private String vmUuid;
-
-
-
     @Override
     public void checkMetric(MetricThresholdType metric, User user) {
         VkCloudToken cloudToken = vkCloudTokenJpaRepository.findByUserId(user.getId()).orElseThrow(() -> new NotFoundToken("Ваш токен для Vk Cloud не найден. Пожалуйста, добавьте токен."));
 
-        VmMonitoringResponse instantUsage = vmMonitoringCloudApiClient.getForInstantUsage(
-                serviceEncrypt.decrypt(cloudToken.getEncryptedAdminToken()),
-                projectId,
-                String.format(metric.getPattern(), vmUuid),
-                namespace
-        );
+        ThresholdSetting setting = user.getSettings().stream().findFirst().orElse(null);
 
-        for (VmMonitoringResponse.ResultItem resultItem : instantUsage.getData().getResult()) {
-            for (VmMonitoringResponse.ResultItem.ValueItem value : resultItem.getValues()) {
-                String instantValue = value.getValue();
-                Optional<ThresholdSetting> thresholdSetting = user.getSettings().stream()
-                        .filter(it -> it.getMetricType().equals(metric))
-                        .findFirst();
+        if (setting != null) {
+            VmMonitoringResponse instantUsage = vmMonitoringCloudApiClient.getForInstantUsage(
+                    serviceEncrypt.decrypt(cloudToken.getEncryptedAdminToken()),
+                    setting.getProjectId(),
+                    String.format(metric.getPattern(), setting.getVmId()),
+                    setting.getNamespace()
+            );
 
-                if (thresholdSetting.isPresent()) {
-                    String userValue = thresholdSetting.get().getThresholdValue();
-                    if (userValue.compareTo(instantValue) > 0) {
-                        notificationService.sendNotification(createNotificationMessage(
-                                user.getId(), instantValue, value.getTimestamp(), userValue, metric
-                            )
-                        );
+            for (VmMonitoringResponse.ResultItem resultItem : instantUsage.getData().getResult()) {
+                for (VmMonitoringResponse.ResultItem.ValueItem value : resultItem.getValues()) {
+                    String instantValue = value.getValue();
+                    Optional<ThresholdSetting> thresholdSetting = user.getSettings().stream()
+                            .filter(it -> it.getMetricType().equals(metric))
+                            .findFirst();
+
+                    if (thresholdSetting.isPresent()) {
+                        String userValue = thresholdSetting.get().getThresholdValue();
+                        if (userValue.compareTo(instantValue) > 0) {
+                            notificationService.sendNotification(createNotificationMessage(
+                                            user.getId(), instantValue, value.getTimestamp(), userValue, metric
+                                    )
+                            );
+                        }
                     }
                 }
             }
+        } else {
+            log.info("Setting is null for user: {}", user.getId());
         }
     }
 
