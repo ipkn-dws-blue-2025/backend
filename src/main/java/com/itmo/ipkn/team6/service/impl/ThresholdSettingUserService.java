@@ -70,7 +70,7 @@ public class ThresholdSettingUserService {
 
         User user = new User();
         user.setId(userId);
-        thresholdSetting.setUser(user);
+        thresholdSetting.setUserId(userId);
 
         return thresholdSetting;
     }

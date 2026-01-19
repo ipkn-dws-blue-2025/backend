@@ -4,6 +4,7 @@ import com.itmo.ipkn.team6.dto.VmBaseDtoList;
 import com.itmo.ipkn.team6.dto.VmBaseMetricDto;
 import com.itmo.ipkn.team6.exception.dto.ErrorDto;
 import com.itmo.ipkn.team6.service.VmMonitoringService;
+import com.itmo.ipkn.team6.util.Constants;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -20,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/itmo/ipkn/team6/api/monitoring")
+@RequestMapping(Constants.Controller.MONITORING_API)
 @Tag(name = "API для мониторинга ВМ")
 public class VmMonitoringController {
 
@@ -84,9 +85,7 @@ public class VmMonitoringController {
             }
     )
     public VmBaseDtoList getListOfVms(@RequestHeader("X-User-Id") Long userId) {
-
         return vmMonitoringService.getListOfVms(userId);
-
     }
 
     @Operation(
@@ -144,12 +143,6 @@ public class VmMonitoringController {
     )
     @GetMapping("/get-vm-metric")
     public VmBaseMetricDto getVmBaseDtoMetric(@RequestHeader("X-User-Id") Long userId, @RequestHeader("Project-Id") String projectId, @RequestHeader("Vm-Id") String vmId) {
-
         return vmMonitoringService.getVmBaseMetric(userId, projectId, vmId);
-
     }
-
-
-
-
 }

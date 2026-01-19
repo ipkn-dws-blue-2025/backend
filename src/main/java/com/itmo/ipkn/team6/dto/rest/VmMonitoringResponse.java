@@ -33,7 +33,7 @@ public class VmMonitoringResponse {
     public static class ResultItem {
         private Map<String, String> metric;
 
-        private List<ValueItem> values;
+        private List<String> value;
 
         @Data
         @Getter
