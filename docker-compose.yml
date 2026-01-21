@@ -49,3 +49,20 @@ services:
         condition: service_healthy
       rabbitmq:
         condition: service_healthy
+
+  notification_worker:
+    build: ./notification_worker
+    container_name: notification_worker
+    volumes:
+      - ./logs:/app/logs
+    environment:
+      RABBIT_HOST: rabbitmq
+      RABBIT_PORT: 5672
+      RABBIT_USERNAME: ${RABBIT_USER}
+      RABBIT_PASSWORD: ${RABBIT_PASS}
+      RABBIT_QUEUE: notification_queue
+      VK_SERVICE_TOKEN: ${VK_SERVICE_TOKEN}
+      LOG_FILE: /app/logs/notification_worker.log
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
