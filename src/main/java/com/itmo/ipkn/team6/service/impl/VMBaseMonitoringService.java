@@ -65,8 +65,13 @@ public class VMBaseMonitoringService implements MetricsChecker {
                     log.warn("Instant usage response body is null for userId={}, metric={}", userId, metric);
                     return;
                 }
+                if (instantUsage.getData() == null || instantUsage.getData().getResult() == null) {
+                    log.warn("Instant usage data/result is null for userId={}, metric={}", userId, metric);
+                    return;
+                }
 
                 log.info("Compare settings to instant values for user: {}, for metric type: {}", userId, metric);
+                log.info("Result items count: {}", instantUsage.getData().getResult().size());
                 for (VmMonitoringResponse.ResultItem resultItem : instantUsage.getData().getResult()) {
                     List<String> list = resultItem.getValue();
                     if (list == null || list.size() < 2) {
@@ -75,6 +80,7 @@ public class VMBaseMonitoringService implements MetricsChecker {
                     }
                     String timestamp = list.get(0);
                     String instantValue = list.get(1);
+                    log.info("Raw instant values: timestamp={}, value={}", timestamp, instantValue);
                     Optional<ThresholdSetting> thresholdSetting = userSettings.stream()
                             .filter(it -> it.getMetricType().equals(metric))
                             .findFirst();
