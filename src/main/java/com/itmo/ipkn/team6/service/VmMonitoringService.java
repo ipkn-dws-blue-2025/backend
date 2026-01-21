@@ -42,6 +42,7 @@ public class VmMonitoringService {
     private final VmMonitoringApiClient vmMonitoringApiClient;
     private final ServiceEncrypt serviceEncrypt;
     private final OperatorTokenJpaRepository operatorTokenJpaRepository;
+    private final VmMockDataService vmMockDataService;
 
     private final String projectIdForMockVm = "2";
 
@@ -57,7 +58,7 @@ public class VmMonitoringService {
         // имитация создания стенда с мок данными
         if (token.equals("00000")) {
 
-            return createMockVmBaseDtoList();
+            return vmMockDataService.getMockVmBaseDtoList();
 
         }
 
@@ -74,7 +75,7 @@ public class VmMonitoringService {
 
         if (token.equals("00000")) {
 
-            return createVmBaseMetricDto();
+            return createVmBaseMetricDto(vmId);
 
         }
 
@@ -131,8 +132,20 @@ public class VmMonitoringService {
      *
      * @return
      */
-    private VmBaseMetricDto createVmBaseMetricDto() {
+    private VmBaseMetricDto createVmBaseMetricDto(String vmId) {
 
+        for (VmBaseDto vmBaseDto : vmMockDataService.getMockVmBaseDtoList().getServers()) {
+            if (vmBaseDto.getId().equals(vmId)) {
+                if (vmBaseDto.getStatus().equals(StatusVm.SHUTOFF)) {
+                    return VmBaseMetricDto.builder()
+                            .cpuLoadPercent((double) 0)
+                            .ramUsedPercent((double) 0)
+                            .diskUsedPercent((double) 0)
+                            .timestamp(LocalDateTime.now())
+                            .build();
+                }
+            }
+        }
 
         ThreadLocalRandom localRandom = ThreadLocalRandom.current();
 
@@ -151,38 +164,6 @@ public class VmMonitoringService {
 
     }
 
-
-    /**
-     * Создание мок данных для списка виртуальных машин для стенда тестирования
-     *
-     * @return
-     */
-    private VmBaseDtoList createMockVmBaseDtoList() {
-
-
-        VmBaseDtoList vmBaseDtoList = new VmBaseDtoList();
-
-        List<VmBaseDto> servers;
-
-        servers = List.of(
-                createVm(UUID.randomUUID().toString(), "kafka-prod-01", StatusVm.ACTIVE),
-                createVm(UUID.randomUUID().toString(), "kafka-prod-02", StatusVm.ACTIVE),
-                createVm(UUID.randomUUID().toString(), "rabbitmq-main", StatusVm.ACTIVE),
-                createVm(UUID.randomUUID().toString(), "rabbitmq-backup", StatusVm.SHUTOFF),
-                createVm(UUID.randomUUID().toString(), "postgres-primary", StatusVm.ACTIVE),
-                createVm(UUID.randomUUID().toString(), "postgres-replica", StatusVm.SHUTOFF),
-                createVm(UUID.randomUUID().toString(), "nginx-loadbalancer", StatusVm.ACTIVE),
-                createVm(UUID.randomUUID().toString(), "redis-cache", StatusVm.SHUTOFF),
-                createVm(UUID.randomUUID().toString(), "elasticsearch-node-1", StatusVm.ACTIVE),
-                createVm(UUID.randomUUID().toString(), "mongodb-shard-01", StatusVm.ACTIVE),
-                createVm(UUID.randomUUID().toString(), "prometheus-monitoring", StatusVm.ACTIVE),
-                createVm(UUID.randomUUID().toString(), "grafana-dashboard", StatusVm.ACTIVE),
-                createVm(UUID.randomUUID().toString(), "jenkins-ci", StatusVm.ACTIVE));
-
-        vmBaseDtoList.setServers(servers);
-        return vmBaseDtoList;
-
-    }
 
     /**
      * Создание моковых ВМ
