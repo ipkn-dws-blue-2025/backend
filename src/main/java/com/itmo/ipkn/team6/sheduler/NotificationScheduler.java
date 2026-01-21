@@ -23,7 +23,7 @@ public class NotificationScheduler {
     private final ThresholdSettingRepository thresholdSettingRepository;
     private final VMBaseMonitoringService monitoringService;
 
-    @Scheduled(fixedRateString = "${app.scheduler.interval:10000}")
+    @Scheduled(fixedRateString = "10000")
     public void monitorMetrics() {
         log.info("Start checking for notifications");
         List<Long> users = thresholdSettingRepository.findAll().stream()
