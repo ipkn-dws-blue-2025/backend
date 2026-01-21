@@ -72,8 +72,12 @@ public class VMBaseMonitoringService implements MetricsChecker {
                         String userValue = thresholdSetting.get().getThresholdValue();
                         log.info("User value: {}", userValue);
                         log.info("Instant value: {}", instantValue);
-                        BigDecimal userBigDecimal = new BigDecimal(userValue);
-                        BigDecimal instantBigDecimal = new BigDecimal(instantValue);
+                        BigDecimal userBigDecimal = parseDecimal(userValue);
+                        BigDecimal instantBigDecimal = parseDecimal(instantValue);
+                        if (userBigDecimal == null || instantBigDecimal == null) {
+                            log.warn("Skip notification due to invalid numeric values: userValue='{}', instantValue='{}'", userValue, instantValue);
+                            continue;
+                        }
                         if (instantBigDecimal.compareTo(userBigDecimal) > 0) {
                             String notificationMessage = createNotificationMessage(
                                     userId, instantValue, Long.parseLong(timestamp), userValue, metric
@@ -104,6 +108,22 @@ public class VMBaseMonitoringService implements MetricsChecker {
             return objectMapper.writeValueAsString(message);
         } catch (Exception e) {
             throw new FailedToConvertException();
+        }
+    }
+
+    private BigDecimal parseDecimal(String rawValue) {
+        if (rawValue == null) {
+            return null;
+        }
+        String normalized = rawValue.trim().replace(",", ".");
+        if (normalized.isBlank()) {
+            return null;
+        }
+        try {
+            return new BigDecimal(normalized);
+        } catch (NumberFormatException ex) {
+            log.warn("Failed to parse numeric value: '{}'", rawValue);
+            return null;
         }
     }
 }
