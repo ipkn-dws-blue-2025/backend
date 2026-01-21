@@ -1,0 +1,852 @@
+2026-01-21 12:41:22,528 | INFO | Connecting to RabbitMQ at rabbitmq:5672
+2026-01-21 12:41:22,762 | INFO | Consuming queue 'notification_queue'
+2026-01-21 12:46:47,379 | INFO | Connecting to RabbitMQ at rabbitmq:5672
+2026-01-21 12:46:47,485 | INFO | Consuming queue 'notification_queue'
+2026-01-21 12:53:41,201 | INFO | Connecting to RabbitMQ at rabbitmq:5672
+2026-01-21 12:53:41,346 | INFO | Consuming queue 'notification_queue'
+2026-01-21 14:24:09,797 | INFO | Connecting to RabbitMQ at rabbitmq:5672
+2026-01-21 14:24:09,932 | INFO | Consuming queue 'notification_queue'
+2026-01-21 14:35:17,006 | INFO | Connecting to RabbitMQ at rabbitmq:5672
+2026-01-21 14:35:17,085 | INFO | Consuming queue 'notification_queue'
+2026-01-21 14:41:01,495 | INFO | Connecting to RabbitMQ at rabbitmq:5672
+2026-01-21 14:41:01,710 | INFO | Consuming queue 'notification_queue'
+2026-01-21 15:13:09,184 | INFO | Connecting to RabbitMQ at rabbitmq:5672
+2026-01-21 15:13:09,337 | INFO | Consuming queue 'notification_queue'
+2026-01-21 15:14:35,882 | WARNING | VK API error: {'error_code': 5, 'error_msg': 'User authorization failed: invalid access_token (4).', 'request_params': [{'key': 'method', 'value': 'notifications.sendMessage'}, {'key': 'oauth', 'value': '1'}, {'key': 'user_ids', 'value': '183594998'}, {'key': 'message', 'value': 'Alert: Metric CPU, value 31.858407079665, threshold 2, at 1769008474'}, {'key': 'v', 'value': '5.199'}]}
+2026-01-21 15:14:36,020 | WARNING | VK API error: {'error_code': 5, 'error_msg': 'User authorization failed: invalid access_token (4).', 'request_params': [{'key': 'method', 'value': 'notifications.sendMessage'}, {'key': 'oauth', 'value': '1'}, {'key': 'user_ids', 'value': '183594998'}, {'key': 'message', 'value': 'Alert: Metric RAM, value 66.4940056145, threshold 2, at 1769008475'}, {'key': 'v', 'value': '5.199'}]}
+2026-01-21 15:14:36,137 | WARNING | VK API error: {'error_code': 5, 'error_msg': 'User authorization failed: invalid access_token (4).', 'request_params': [{'key': 'method', 'value': 'notifications.sendMessage'}, {'key': 'oauth', 'value': '1'}, {'key': 'user_ids', 'value': '183594998'}, {'key': 'message', 'value': 'Alert: Metric DISK_READ, value 3868917.76, threshold 2, at 1769008475'}, {'key': 'v', 'value': '5.199'}]}
+2026-01-21 15:14:36,257 | WARNING | VK API error: {'error_code': 5, 'error_msg': 'User authorization failed: invalid access_token (4).', 'request_params': [{'key': 'method', 'value': 'notifications.sendMessage'}, {'key': 'oauth', 'value': '1'}, {'key': 'user_ids', 'value': '183594998'}, {'key': 'message', 'value': 'Alert: Metric CPU, value 31.858407079665, threshold 2, at 1769008475'}, {'key': 'v', 'value': '5.199'}]}
+2026-01-21 15:14:36,372 | WARNING | VK API error: {'error_code': 5, 'error_msg': 'User authorization failed: invalid access_token (4).', 'request_params': [{'key': 'method', 'value': 'notifications.sendMessage'}, {'key': 'oauth', 'value': '1'}, {'key': 'user_ids', 'value': '183594998'}, {'key': 'message', 'value': 'Alert: Metric RAM, value 66.4940056145, threshold 2, at 1769008476'}, {'key': 'v', 'value': '5.199'}]}
+2026-01-21 15:14:36,491 | WARNING | VK API error: {'error_code': 5, 'error_msg': 'User authorization failed: invalid access_token (4).', 'request_params': [{'key': 'method', 'value': 'notifications.sendMessage'}, {'key': 'oauth', 'value': '1'}, {'key': 'user_ids', 'value': '183594998'}, {'key': 'message', 'value': 'Alert: Metric DISK_READ, value 3868917.76, threshold 2, at 1769008476'}, {'key': 'v', 'value': '5.199'}]}
+2026-01-21 15:14:36,743 | WARNING | VK API error: {'error_code': 5, 'error_msg': 'User authorization failed: invalid access_token (4).', 'request_params': [{'key': 'method', 'value': 'notifications.sendMessage'}, {'key': 'oauth', 'value': '1'}, {'key': 'user_ids', 'value': '183594998'}, {'key': 'message', 'value': 'Alert: Metric CPU, value 31.858407079665, threshold 2, at 1769008476'}, {'key': 'v', 'value': '5.199'}]}
+2026-01-21 15:14:37,002 | WARNING | VK API error: {'error_code': 5, 'error_msg': 'User authorization failed: invalid access_token (4).', 'request_params': [{'key': 'method', 'value': 'notifications.sendMessage'}, {'key': 'oauth', 'value': '1'}, {'key': 'user_ids', 'value': '183594998'}, {'key': 'message', 'value': 'Alert: Metric RAM, value 66.4940056145, threshold 2, at 1769008476'}, {'key': 'v', 'value': '5.199'}]}
+2026-01-21 15:14:37,255 | WARNING | VK API error: {'error_code': 5, 'error_msg': 'User authorization failed: invalid access_token (4).', 'request_params': [{'key': 'method', 'value': 'notifications.sendMessage'}, {'key': 'oauth', 'value': '1'}, {'key': 'user_ids', 'value': '183594998'}, {'key': 'message', 'value': 'Alert: Metric DISK_READ, value 3868917.76, threshold 2, at 1769008477'}, {'key': 'v', 'value': '5.199'}]}
+2026-01-21 15:14:45,114 | WARNING | VK API error: {'error_code': 5, 'error_msg': 'User authorization failed: invalid access_token (4).', 'request_params': [{'key': 'method', 'value': 'notifications.sendMessage'}, {'key': 'oauth', 'value': '1'}, {'key': 'user_ids', 'value': '183594998'}, {'key': 'message', 'value': 'Alert: Metric CPU, value 17.1487603306, threshold 2, at 1769008484'}, {'key': 'v', 'value': '5.199'}]}
+2026-01-21 15:14:45,360 | WARNING | VK API error: {'error_code': 5, 'error_msg': 'User authorization failed: invalid access_token (4).', 'request_params': [{'key': 'method', 'value': 'notifications.sendMessage'}, {'key': 'oauth', 'value': '1'}, {'key': 'user_ids', 'value': '183594998'}, {'key': 'message', 'value': 'Alert: Metric RAM, value 68.1625207701, threshold 2, at 1769008485'}, {'key': 'v', 'value': '5.199'}]}
+2026-01-21 15:14:45,540 | WARNING | VK API error: {'error_code': 5, 'error_msg': 'User authorization failed: invalid access_token (4).', 'request_params': [{'key': 'method', 'value': 'notifications.sendMessage'}, {'key': 'oauth', 'value': '1'}, {'key': 'user_ids', 'value': '183594998'}, {'key': 'message', 'value': 'Alert: Metric DISK_READ, value 4070741.3333333335, threshold 2, at 1769008485'}, {'key': 'v', 'value': '5.199'}]}
+2026-01-21 15:14:45,946 | WARNING | VK API error: {'error_code': 5, 'error_msg': 'User authorization failed: invalid access_token (4).', 'request_params': [{'key': 'method', 'value': 'notifications.sendMessage'}, {'key': 'oauth', 'value': '1'}, {'key': 'user_ids', 'value': '183594998'}, {'key': 'message', 'value': 'Alert: Metric CPU, value 17.1487603306, threshold 2, at 1769008485'}, {'key': 'v', 'value': '5.199'}]}
+2026-01-21 15:14:46,093 | WARNING | VK API error: {'error_code': 5, 'error_msg': 'User authorization failed: invalid access_token (4).', 'request_params': [{'key': 'method', 'value': 'notifications.sendMessage'}, {'key': 'oauth', 'value': '1'}, {'key': 'user_ids', 'value': '183594998'}, {'key': 'message', 'value': 'Alert: Metric RAM, value 68.1625207701, threshold 2, at 1769008485'}, {'key': 'v', 'value': '5.199'}]}
+2026-01-21 15:14:46,336 | WARNING | VK API error: {'error_code': 5, 'error_msg': 'User authorization failed: invalid access_token (4).', 'request_params': [{'key': 'method', 'value': 'notifications.sendMessage'}, {'key': 'oauth', 'value': '1'}, {'key': 'user_ids', 'value': '183594998'}, {'key': 'message', 'value': 'Alert: Metric DISK_READ, value 4070741.3333333335, threshold 2, at 1769008485'}, {'key': 'v', 'value': '5.199'}]}
+2026-01-21 15:14:46,436 | WARNING | VK API error: {'error_code': 5, 'error_msg': 'User authorization failed: invalid access_token (4).', 'request_params': [{'key': 'method', 'value': 'notifications.sendMessage'}, {'key': 'oauth', 'value': '1'}, {'key': 'user_ids', 'value': '183594998'}, {'key': 'message', 'value': 'Alert: Metric CPU, value 17.1487603306, threshold 2, at 1769008486'}, {'key': 'v', 'value': '5.199'}]}
+2026-01-21 15:14:46,559 | WARNING | VK API error: {'error_code': 5, 'error_msg': 'User authorization failed: invalid access_token (4).', 'request_params': [{'key': 'method', 'value': 'notifications.sendMessage'}, {'key': 'oauth', 'value': '1'}, {'key': 'user_ids', 'value': '183594998'}, {'key': 'message', 'value': 'Alert: Metric RAM, value 68.1625207701, threshold 2, at 1769008486'}, {'key': 'v', 'value': '5.199'}]}
+2026-01-21 15:14:46,710 | WARNING | VK API error: {'error_code': 5, 'error_msg': 'User authorization failed: invalid access_token (4).', 'request_params': [{'key': 'method', 'value': 'notifications.sendMessage'}, {'key': 'oauth', 'value': '1'}, {'key': 'user_ids', 'value': '183594998'}, {'key': 'message', 'value': 'Alert: Metric DISK_READ, value 4070741.3333333335, threshold 2, at 1769008486'}, {'key': 'v', 'value': '5.199'}]}
+2026-01-21 15:14:54,921 | WARNING | VK API error: {'error_code': 5, 'error_msg': 'User authorization failed: invalid access_token (4).', 'request_params': [{'key': 'method', 'value': 'notifications.sendMessage'}, {'key': 'oauth', 'value': '1'}, {'key': 'user_ids', 'value': '183594998'}, {'key': 'message', 'value': 'Alert: Metric CPU, value 35.5460385438, threshold 2, at 1769008494'}, {'key': 'v', 'value': '5.199'}]}
+2026-01-21 15:14:55,118 | WARNING | VK API error: {'error_code': 5, 'error_msg': 'User authorization failed: invalid access_token (4).', 'request_params': [{'key': 'method', 'value': 'notifications.sendMessage'}, {'key': 'oauth', 'value': '1'}, {'key': 'user_ids', 'value': '183594998'}, {'key': 'message', 'value': 'Alert: Metric RAM, value 67.882606735, threshold 2, at 1769008494'}, {'key': 'v', 'value': '5.199'}]}
+2026-01-21 15:14:55,258 | WARNING | VK API error: {'error_code': 5, 'error_msg': 'User authorization failed: invalid access_token (4).', 'request_params': [{'key': 'method', 'value': 'notifications.sendMessage'}, {'key': 'oauth', 'value': '1'}, {'key': 'user_ids', 'value': '183594998'}, {'key': 'message', 'value': 'Alert: Metric DISK_READ, value 4250689.070234113, threshold 2, at 1769008495'}, {'key': 'v', 'value': '5.199'}]}
+2026-01-21 15:14:55,729 | WARNING | VK API error: {'error_code': 5, 'error_msg': 'User authorization failed: invalid access_token (4).', 'request_params': [{'key': 'method', 'value': 'notifications.sendMessage'}, {'key': 'oauth', 'value': '1'}, {'key': 'user_ids', 'value': '183594998'}, {'key': 'message', 'value': 'Alert: Metric CPU, value 35.5460385438, threshold 2, at 1769008495'}, {'key': 'v', 'value': '5.199'}]}
+2026-01-21 15:14:55,897 | WARNING | VK API error: {'error_code': 5, 'error_msg': 'User authorization failed: invalid access_token (4).', 'request_params': [{'key': 'method', 'value': 'notifications.sendMessage'}, {'key': 'oauth', 'value': '1'}, {'key': 'user_ids', 'value': '183594998'}, {'key': 'message', 'value': 'Alert: Metric RAM, value 67.882606735, threshold 2, at 1769008495'}, {'key': 'v', 'value': '5.199'}]}
+2026-01-21 15:14:56,245 | WARNING | VK API error: {'error_code': 5, 'error_msg': 'User authorization failed: invalid access_token (4).', 'request_params': [{'key': 'method', 'value': 'notifications.sendMessage'}, {'key': 'oauth', 'value': '1'}, {'key': 'user_ids', 'value': '183594998'}, {'key': 'message', 'value': 'Alert: Metric DISK_READ, value 4250689.070234113, threshold 2, at 1769008495'}, {'key': 'v', 'value': '5.199'}]}
+2026-01-21 15:14:56,671 | WARNING | VK API error: {'error_code': 5, 'error_msg': 'User authorization failed: invalid access_token (4).', 'request_params': [{'key': 'method', 'value': 'notifications.sendMessage'}, {'key': 'oauth', 'value': '1'}, {'key': 'user_ids', 'value': '183594998'}, {'key': 'message', 'value': 'Alert: Metric CPU, value 35.5460385438, threshold 2, at 1769008496'}, {'key': 'v', 'value': '5.199'}]}
+2026-01-21 15:14:56,970 | WARNING | VK API error: {'error_code': 5, 'error_msg': 'User authorization failed: invalid access_token (4).', 'request_params': [{'key': 'method', 'value': 'notifications.sendMessage'}, {'key': 'oauth', 'value': '1'}, {'key': 'user_ids', 'value': '183594998'}, {'key': 'message', 'value': 'Alert: Metric RAM, value 67.882606735, threshold 2, at 1769008496'}, {'key': 'v', 'value': '5.199'}]}
+2026-01-21 15:14:57,207 | WARNING | VK API error: {'error_code': 5, 'error_msg': 'User authorization failed: invalid access_token (4).', 'request_params': [{'key': 'method', 'value': 'notifications.sendMessage'}, {'key': 'oauth', 'value': '1'}, {'key': 'user_ids', 'value': '183594998'}, {'key': 'message', 'value': 'Alert: Metric DISK_READ, value 4250689.070234113, threshold 2, at 1769008496'}, {'key': 'v', 'value': '5.199'}]}
+2026-01-21 15:16:15,605 | INFO | Connecting to RabbitMQ at rabbitmq:5672
+2026-01-21 15:16:15,673 | INFO | Consuming queue 'notification_queue'
+2026-01-21 15:17:06,560 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:06,726 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:06,913 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:07,055 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:07,208 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:07,475 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:07,811 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:08,056 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:08,260 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:10,272 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:10,463 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:10,703 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:11,098 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:11,299 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:11,571 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:11,952 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:12,117 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:12,332 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:20,461 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:20,657 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:20,875 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:21,094 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:21,369 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:21,545 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:21,783 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:22,007 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:22,167 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:30,351 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:30,722 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:30,914 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:31,177 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:31,379 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:31,606 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:31,994 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:32,246 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:32,428 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:40,434 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:40,730 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:40,977 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:41,281 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:41,476 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:41,779 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:41,922 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:42,105 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:42,220 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:50,181 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:50,332 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:50,490 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:50,627 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:50,737 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:50,922 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:51,081 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:51,177 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:17:51,295 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:00,183 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:00,329 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:00,613 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:00,723 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:00,842 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:00,966 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:01,130 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:01,258 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:01,417 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:10,288 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:10,383 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:10,472 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:10,654 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:10,862 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:10,966 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:11,084 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:11,163 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:11,290 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:20,176 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:20,305 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:20,424 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:20,544 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:20,709 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:20,841 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:21,012 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:21,121 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:21,240 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:30,178 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:30,303 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:30,425 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:30,555 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:30,721 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:30,847 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:30,967 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:31,071 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:31,189 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:40,197 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:40,345 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:40,470 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:40,620 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:40,718 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:40,845 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:41,172 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:41,282 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:41,381 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:50,292 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:50,427 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:50,581 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:50,742 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:50,879 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:51,016 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:51,214 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:51,353 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:18:51,507 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:00,184 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:00,294 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:00,415 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:00,519 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:00,613 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:00,710 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:00,812 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:00,920 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:01,004 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:10,137 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:10,241 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:10,345 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:10,468 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:10,609 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:10,735 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:10,828 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:11,102 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:11,194 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:20,259 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:20,377 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:20,641 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:20,863 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:20,979 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:21,085 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:21,226 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:21,374 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:21,455 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:30,163 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:30,258 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:30,419 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:30,519 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:30,685 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:30,786 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:30,938 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:31,041 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:31,156 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:40,191 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:40,320 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:40,464 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:40,567 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:40,731 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:40,928 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:41,052 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:41,137 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:41,219 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:50,196 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:50,316 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:50,432 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:50,551 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:50,655 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:50,781 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:50,901 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:50,985 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:19:51,149 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:00,195 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:00,466 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:00,657 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:00,806 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:00,965 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:01,111 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:01,273 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:01,428 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:01,608 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:10,145 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:10,239 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:10,357 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:10,507 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:10,638 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:10,738 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:10,827 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:10,931 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:11,035 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:20,276 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:20,386 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:20,561 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:20,708 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:20,961 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:21,075 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:21,221 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:21,348 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:21,476 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:30,143 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:30,267 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:30,404 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:30,537 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:30,666 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:31,063 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:31,160 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:31,260 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:31,349 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:40,151 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:40,270 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:40,412 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:40,526 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:40,630 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:40,821 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:41,192 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:41,340 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:41,430 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:50,155 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:50,250 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:50,476 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:50,598 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:50,718 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:50,825 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:50,961 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:51,059 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:20:51,145 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:00,251 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:00,385 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:00,553 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:00,710 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:00,828 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:00,986 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:01,083 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:01,207 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:01,298 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:10,144 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:10,307 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:10,420 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:10,539 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:10,682 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:10,826 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:10,915 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:11,068 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:11,213 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:20,183 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:20,272 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:20,434 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:20,541 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:20,631 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:20,721 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:20,819 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:20,902 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:20,993 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:30,239 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:30,331 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:30,443 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:30,601 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:30,701 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:30,921 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:31,054 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:31,142 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:31,325 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:40,220 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:40,322 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:40,469 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:40,644 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:40,768 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:40,891 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:40,984 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:41,077 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:41,183 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:50,149 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:50,261 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:50,421 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:50,519 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:50,620 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:50,745 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:50,845 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:50,955 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:21:51,036 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:00,292 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:00,472 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:00,581 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:00,691 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:00,807 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:00,933 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:01,056 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:01,182 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:01,308 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:10,288 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:10,399 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:10,497 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:10,605 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:10,712 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:10,807 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:10,909 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:11,023 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:11,113 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:20,264 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:20,408 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:20,545 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:20,687 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:20,857 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:21,043 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:21,190 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:21,306 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:21,433 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:30,157 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:30,297 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:30,424 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:30,517 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:30,621 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:30,764 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:30,931 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:31,012 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:31,118 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:40,257 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:40,378 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:40,482 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:40,592 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:40,687 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:40,936 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:41,316 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:41,410 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:41,503 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:50,198 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:50,302 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:50,419 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:50,520 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:50,605 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:50,695 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:50,790 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:50,885 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:22:51,016 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:00,175 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:00,291 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:00,384 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:00,476 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:00,587 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:00,727 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:00,809 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:00,908 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:01,000 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:10,186 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:10,287 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:10,395 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:10,500 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:10,607 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:10,712 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:10,817 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:10,916 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:11,018 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:20,249 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:20,342 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:20,469 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:20,650 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:20,751 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:20,852 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:20,952 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:21,078 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:21,179 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:30,356 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:30,569 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:30,758 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:30,917 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:31,082 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:31,220 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:31,365 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:31,493 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:31,601 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:40,137 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:40,239 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:40,340 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:40,437 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:40,522 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:40,636 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:40,755 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:40,878 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:41,042 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:50,166 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:50,314 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:50,457 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:50,584 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:50,696 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:50,833 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:50,951 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:51,096 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:23:51,181 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:24:00,247 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:24:00,342 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:24:00,494 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:24:00,623 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:24:00,806 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:24:00,909 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:24:01,098 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:24:01,191 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:24:01,316 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:24:10,213 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:24:10,330 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:24:10,465 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:24:10,608 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:24:10,704 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:24:10,801 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:24:10,888 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:24:10,982 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:24:11,071 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:24:22,204 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:24:22,320 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:24:22,447 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:24:22,587 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:24:22,683 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:24:22,803 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:24:23,865 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:24:23,967 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:24:24,061 | INFO | Notification delivered to user_id=183594998
+2026-01-21 15:25:23,680 | INFO | Connecting to RabbitMQ at rabbitmq:5672
+2026-01-21 15:25:23,783 | INFO | Consuming queue 'notification_queue'
+2026-01-21 15:45:25,789 | INFO | Connecting to RabbitMQ at rabbitmq:5672
+2026-01-21 15:45:25,899 | INFO | Consuming queue 'notification_queue' with VK method 'messages.send'
+2026-01-21 15:55:56,113 | INFO | Connecting to RabbitMQ at rabbitmq:5672
+2026-01-21 15:55:56,236 | INFO | Consuming queue 'notification_queue' with VK method 'messages.send'
+2026-01-21 15:57:13,860 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:14,276 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:14,509 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:14,678 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:14,857 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:15,019 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:15,231 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:15,431 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:15,598 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:22,655 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:22,899 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:23,159 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:24,158 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:24,431 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:24,707 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:25,057 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:25,303 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:25,489 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:32,517 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:32,771 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:32,967 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:33,247 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:33,504 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:33,696 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:33,912 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:34,098 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:34,386 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:42,497 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:42,872 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:43,096 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:43,274 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:43,651 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:43,841 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:44,145 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:44,350 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:44,528 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:52,630 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:52,834 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:53,022 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:53,393 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:53,610 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:53,830 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:54,002 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:54,165 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:57:54,366 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:02,578 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:02,847 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:03,038 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:03,253 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:03,430 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:03,638 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:03,822 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:04,073 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:05,115 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:12,536 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:12,794 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:13,045 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:13,260 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:13,474 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:13,679 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:13,846 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:14,069 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:14,285 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:22,643 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:22,942 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:23,178 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:23,478 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:23,807 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:24,196 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:24,385 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:24,616 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:24,865 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:32,468 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:32,679 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:32,851 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:33,089 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:33,294 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:33,534 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:33,760 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:33,944 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:34,161 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:42,504 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:42,735 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:42,939 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:43,199 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:43,393 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:43,563 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:43,743 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:43,901 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:44,067 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:52,618 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:52,837 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:53,223 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:53,439 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:53,627 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:54,400 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:55,216 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:55,484 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:58:55,671 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:59:02,563 | INFO | Notification delivered via messages.send to user_id=183594998
+2026-01-21 15:59:02,675 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011142568'}]}
+2026-01-21 15:59:02,797 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011142677'}]}
+2026-01-21 15:59:02,930 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011142799'}]}
+2026-01-21 15:59:03,032 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011142931'}]}
+2026-01-21 15:59:03,132 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011143034'}]}
+2026-01-21 15:59:03,280 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011143165'}]}
+2026-01-21 15:59:03,386 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011143283'}]}
+2026-01-21 15:59:03,500 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011143389'}]}
+2026-01-21 15:59:12,410 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011152286'}]}
+2026-01-21 15:59:12,521 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011152413'}]}
+2026-01-21 15:59:12,660 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011152525'}]}
+2026-01-21 15:59:12,780 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011152662'}]}
+2026-01-21 15:59:12,897 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011152781'}]}
+2026-01-21 15:59:13,014 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011152899'}]}
+2026-01-21 15:59:13,153 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011153018'}]}
+2026-01-21 15:59:13,285 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011153159'}]}
+2026-01-21 15:59:13,388 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011153287'}]}
+2026-01-21 15:59:22,388 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011162279'}]}
+2026-01-21 15:59:22,496 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011162393'}]}
+2026-01-21 15:59:22,904 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011162501'}]}
+2026-01-21 15:59:23,015 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011162910'}]}
+2026-01-21 15:59:23,115 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011163018'}]}
+2026-01-21 15:59:23,222 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011163117'}]}
+2026-01-21 15:59:23,619 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011163227'}]}
+2026-01-21 15:59:23,772 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011163622'}]}
+2026-01-21 15:59:23,884 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011163774'}]}
+2026-01-21 15:59:32,519 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011172360'}]}
+2026-01-21 15:59:32,682 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011172524'}]}
+2026-01-21 15:59:32,861 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011172688'}]}
+2026-01-21 15:59:33,136 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011172955'}]}
+2026-01-21 15:59:33,294 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011173141'}]}
+2026-01-21 15:59:33,462 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011173298'}]}
+2026-01-21 15:59:33,613 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011173465'}]}
+2026-01-21 15:59:33,766 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011173617'}]}
+2026-01-21 15:59:33,922 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011173774'}]}
+2026-01-21 15:59:42,370 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011182259'}]}
+2026-01-21 15:59:42,489 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011182372'}]}
+2026-01-21 15:59:42,594 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011182491'}]}
+2026-01-21 15:59:42,699 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011182597'}]}
+2026-01-21 15:59:42,828 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011182701'}]}
+2026-01-21 15:59:42,931 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011182830'}]}
+2026-01-21 15:59:43,058 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011182937'}]}
+2026-01-21 15:59:43,180 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011183060'}]}
+2026-01-21 15:59:43,280 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011183182'}]}
+2026-01-21 15:59:52,414 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011192283'}]}
+2026-01-21 15:59:52,551 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011192419'}]}
+2026-01-21 15:59:52,688 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011192555'}]}
+2026-01-21 15:59:52,795 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011192690'}]}
+2026-01-21 15:59:52,904 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011192798'}]}
+2026-01-21 15:59:53,035 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011192906'}]}
+2026-01-21 15:59:53,146 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011193037'}]}
+2026-01-21 15:59:53,271 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011193165'}]}
+2026-01-21 15:59:53,392 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011193275'}]}
+2026-01-21 16:00:02,460 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011202349'}]}
+2026-01-21 16:00:02,612 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011202463'}]}
+2026-01-21 16:00:02,748 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011202614'}]}
+2026-01-21 16:00:02,873 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011202750'}]}
+2026-01-21 16:00:02,997 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011202878'}]}
+2026-01-21 16:00:03,142 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011202999'}]}
+2026-01-21 16:00:03,241 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011203147'}]}
+2026-01-21 16:00:03,424 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011203244'}]}
+2026-01-21 16:00:03,527 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011203427'}]}
+2026-01-21 16:00:12,380 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011212261'}]}
+2026-01-21 16:00:12,494 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011212383'}]}
+2026-01-21 16:00:12,633 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011212498'}]}
+2026-01-21 16:00:12,749 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011212635'}]}
+2026-01-21 16:00:12,885 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011212751'}]}
+2026-01-21 16:00:13,016 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011212888'}]}
+2026-01-21 16:00:13,119 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011213020'}]}
+2026-01-21 16:00:13,247 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011213123'}]}
+2026-01-21 16:00:13,372 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011213249'}]}
+2026-01-21 16:00:22,507 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011222350'}]}
+2026-01-21 16:00:22,616 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011222509'}]}
+2026-01-21 16:00:22,771 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011222620'}]}
+2026-01-21 16:00:22,915 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011222777'}]}
+2026-01-21 16:00:23,057 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011222922'}]}
+2026-01-21 16:00:23,188 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011223059'}]}
+2026-01-21 16:00:23,331 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011223193'}]}
+2026-01-21 16:00:23,432 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011223333'}]}
+2026-01-21 16:00:23,554 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011223434'}]}
+2026-01-21 16:00:32,368 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011232263'}]}
+2026-01-21 16:00:32,478 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011232371'}]}
+2026-01-21 16:00:32,596 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011232484'}]}
+2026-01-21 16:00:32,718 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011232598'}]}
+2026-01-21 16:00:32,860 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011232720'}]}
+2026-01-21 16:00:33,020 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011232862'}]}
+2026-01-21 16:00:33,240 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011233026'}]}
+2026-01-21 16:00:33,377 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011233243'}]}
+2026-01-21 16:00:33,493 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011233380'}]}
+2026-01-21 16:00:42,524 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011242351'}]}
+2026-01-21 16:00:42,729 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011242531'}]}
+2026-01-21 16:00:42,869 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011242736'}]}
+2026-01-21 16:00:43,019 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011242873'}]}
+2026-01-21 16:00:43,205 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011243024'}]}
+2026-01-21 16:00:43,434 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011243218'}]}
+2026-01-21 16:00:43,612 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011243447'}]}
+2026-01-21 16:00:43,786 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011243616'}]}
+2026-01-21 16:00:43,936 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011243789'}]}
+2026-01-21 16:00:52,368 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011252245'}]}
+2026-01-21 16:00:52,470 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011252370'}]}
+2026-01-21 16:00:52,584 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011252472'}]}
+2026-01-21 16:00:52,683 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011252585'}]}
+2026-01-21 16:00:52,786 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011252687'}]}
+2026-01-21 16:00:52,888 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011252788'}]}
+2026-01-21 16:00:53,003 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011252891'}]}
+2026-01-21 16:00:53,145 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011253005'}]}
+2026-01-21 16:00:53,251 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011253147'}]}
+2026-01-21 16:01:02,402 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011262252'}]}
+2026-01-21 16:01:02,544 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011262405'}]}
+2026-01-21 16:01:02,669 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011262546'}]}
+2026-01-21 16:01:02,942 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011262820'}]}
+2026-01-21 16:01:03,091 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011262945'}]}
+2026-01-21 16:01:03,364 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011263238'}]}
+2026-01-21 16:01:03,509 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011263386'}]}
+2026-01-21 16:01:03,690 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011263513'}]}
+2026-01-21 16:01:03,872 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011263694'}]}
+2026-01-21 16:01:12,366 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011272263'}]}
+2026-01-21 16:01:12,467 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011272368'}]}
+2026-01-21 16:01:12,665 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011272469'}]}
+2026-01-21 16:01:12,782 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011272667'}]}
+2026-01-21 16:01:12,915 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011272785'}]}
+2026-01-21 16:01:13,009 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011272917'}]}
+2026-01-21 16:01:13,115 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011273012'}]}
+2026-01-21 16:01:13,214 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011273117'}]}
+2026-01-21 16:01:13,308 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011273216'}]}
+2026-01-21 16:01:22,497 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011282362'}]}
+2026-01-21 16:01:22,633 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011282499'}]}
+2026-01-21 16:01:22,747 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011282635'}]}
+2026-01-21 16:01:22,852 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011282751'}]}
+2026-01-21 16:01:22,964 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011282857'}]}
+2026-01-21 16:01:23,070 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011282966'}]}
+2026-01-21 16:01:23,185 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011283072'}]}
+2026-01-21 16:01:23,282 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011283187'}]}
+2026-01-21 16:01:23,378 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011283284'}]}
+2026-01-21 16:01:32,389 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011292252'}]}
+2026-01-21 16:01:32,527 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011292395'}]}
+2026-01-21 16:01:32,663 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011292531'}]}
+2026-01-21 16:01:32,826 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011292667'}]}
+2026-01-21 16:01:33,026 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011292880'}]}
+2026-01-21 16:01:33,130 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011293028'}]}
+2026-01-21 16:01:33,236 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011293132'}]}
+2026-01-21 16:01:33,402 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011293239'}]}
+2026-01-21 16:01:33,512 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011293405'}]}
+2026-01-21 16:01:42,588 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011302411'}]}
+2026-01-21 16:01:42,752 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011302595'}]}
+2026-01-21 16:01:42,929 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011302757'}]}
+2026-01-21 16:01:43,180 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011302990'}]}
+2026-01-21 16:01:43,346 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011303189'}]}
+2026-01-21 16:01:43,482 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011303351'}]}
+2026-01-21 16:01:43,600 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011303489'}]}
+2026-01-21 16:01:43,982 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011303602'}]}
+2026-01-21 16:01:44,089 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011303984'}]}
+2026-01-21 16:01:52,496 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011312340'}]}
+2026-01-21 16:01:52,602 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011312498'}]}
+2026-01-21 16:01:52,725 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011312604'}]}
+2026-01-21 16:01:52,840 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011312727'}]}
+2026-01-21 16:01:53,016 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011312842'}]}
+2026-01-21 16:01:53,124 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011313019'}]}
+2026-01-21 16:01:53,330 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011313127'}]}
+2026-01-21 16:01:53,443 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011313333'}]}
+2026-01-21 16:01:53,610 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011313447'}]}
+2026-01-21 16:02:02,393 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011322248'}]}
+2026-01-21 16:02:02,525 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011322398'}]}
+2026-01-21 16:02:02,627 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011322527'}]}
+2026-01-21 16:02:02,747 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011322629'}]}
+2026-01-21 16:02:02,861 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011322753'}]}
+2026-01-21 16:02:02,977 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011322864'}]}
+2026-01-21 16:02:03,082 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011322980'}]}
+2026-01-21 16:02:03,208 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011323084'}]}
+2026-01-21 16:02:03,312 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011323211'}]}
+2026-01-21 16:02:12,366 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011332256'}]}
+2026-01-21 16:02:12,490 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011332370'}]}
+2026-01-21 16:02:12,612 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011332492'}]}
+2026-01-21 16:02:12,735 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011332614'}]}
+2026-01-21 16:02:12,853 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011332738'}]}
+2026-01-21 16:02:12,960 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011332855'}]}
+2026-01-21 16:02:13,083 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011332962'}]}
+2026-01-21 16:02:13,206 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011333085'}]}
+2026-01-21 16:02:13,303 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011333208'}]}
+2026-01-21 16:02:22,430 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011342269'}]}
+2026-01-21 16:02:22,529 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011342432'}]}
+2026-01-21 16:02:22,633 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011342531'}]}
+2026-01-21 16:02:22,750 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011342635'}]}
+2026-01-21 16:02:22,891 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011342756'}]}
+2026-01-21 16:02:23,005 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011342896'}]}
+2026-01-21 16:02:23,120 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011343007'}]}
+2026-01-21 16:02:23,248 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011343125'}]}
+2026-01-21 16:02:23,373 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011343251'}]}
+2026-01-21 16:02:32,352 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011352244'}]}
+2026-01-21 16:02:32,463 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011352354'}]}
+2026-01-21 16:02:32,600 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011352467'}]}
+2026-01-21 16:02:32,709 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011352606'}]}
+2026-01-21 16:02:32,813 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011352712'}]}
+2026-01-21 16:02:32,921 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011352815'}]}
+2026-01-21 16:02:33,036 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011352926'}]}
+2026-01-21 16:02:33,154 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011353038'}]}
+2026-01-21 16:02:33,259 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011353156'}]}
+2026-01-21 16:02:42,354 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011362245'}]}
+2026-01-21 16:02:42,626 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011362357'}]}
+2026-01-21 16:02:42,758 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011362629'}]}
+2026-01-21 16:02:42,877 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011362762'}]}
+2026-01-21 16:02:42,981 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011362880'}]}
+2026-01-21 16:02:43,223 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011362984'}]}
+2026-01-21 16:02:43,325 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011363225'}]}
+2026-01-21 16:02:43,440 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011363327'}]}
+2026-01-21 16:02:43,534 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011363442'}]}
+2026-01-21 16:02:52,547 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011372402'}]}
+2026-01-21 16:02:52,696 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011372552'}]}
+2026-01-21 16:02:52,843 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011372701'}]}
+2026-01-21 16:02:52,965 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011372847'}]}
+2026-01-21 16:02:53,111 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011372968'}]}
+2026-01-21 16:02:53,292 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011373115'}]}
+2026-01-21 16:02:53,414 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011373297'}]}
+2026-01-21 16:02:53,526 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011373416'}]}
+2026-01-21 16:02:53,649 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011373529'}]}
+2026-01-21 16:03:02,466 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011382344'}]}
+2026-01-21 16:03:02,570 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011382468'}]}
+2026-01-21 16:03:02,737 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011382589'}]}
+2026-01-21 16:03:02,866 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011382740'}]}
+2026-01-21 16:03:03,039 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011382877'}]}
+2026-01-21 16:03:03,207 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011383045'}]}
+2026-01-21 16:03:03,368 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011383216'}]}
+2026-01-21 16:03:03,549 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011383379'}]}
+2026-01-21 16:03:03,685 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011383553'}]}
+2026-01-21 16:06:53,799 | INFO | Connecting to RabbitMQ at rabbitmq:5672
+2026-01-21 16:06:53,927 | INFO | Consuming queue 'notification_queue' with VK method 'messages.send'
+2026-01-21 16:09:21,459 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011760750'}]}
+2026-01-21 16:09:21,620 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011761482'}]}
+2026-01-21 16:09:21,801 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011761629'}]}
+2026-01-21 16:09:21,958 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011761808'}]}
+2026-01-21 16:09:22,173 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011761971'}]}
+2026-01-21 16:09:22,343 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011762189'}]}
+2026-01-21 16:09:22,479 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011762349'}]}
+2026-01-21 16:09:22,600 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011762484'}]}
+2026-01-21 16:09:22,703 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011762602'}]}
+2026-01-21 16:09:29,941 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011769763'}]}
+2026-01-21 16:09:30,117 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011769951'}]}
+2026-01-21 16:09:30,288 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011770125'}]}
+2026-01-21 16:09:30,531 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011770330'}]}
+2026-01-21 16:09:30,730 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011770554'}]}
+2026-01-21 16:09:30,991 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011770777'}]}
+2026-01-21 16:09:31,222 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011771019'}]}
+2026-01-21 16:09:31,444 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011771236'}]}
+2026-01-21 16:09:31,615 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011771464'}]}
+2026-01-21 16:09:40,163 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011779991'}]}
+2026-01-21 16:09:40,313 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011780172'}]}
+2026-01-21 16:09:40,466 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011780319'}]}
+2026-01-21 16:09:40,693 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011780529'}]}
+2026-01-21 16:09:40,884 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011780715'}]}
+2026-01-21 16:09:41,078 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011780911'}]}
+2026-01-21 16:09:41,415 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011781202'}]}
+2026-01-21 16:09:41,630 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011781424'}]}
+2026-01-21 16:09:41,799 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011781640'}]}
+2026-01-21 16:09:49,962 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011789757'}]}
+2026-01-21 16:09:50,156 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011789976'}]}
+2026-01-21 16:09:50,345 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011790168'}]}
+2026-01-21 16:09:50,606 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011790426'}]}
+2026-01-21 16:09:51,010 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011790801'}]}
+2026-01-21 16:09:51,255 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011791073'}]}
+2026-01-21 16:09:51,709 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011791461'}]}
+2026-01-21 16:09:51,938 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011791722'}]}
+2026-01-21 16:09:52,159 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011791948'}]}
+2026-01-21 16:09:59,918 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011799767'}]}
+2026-01-21 16:10:00,221 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011800043'}]}
+2026-01-21 16:10:00,424 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011800232'}]}
+2026-01-21 16:10:00,709 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011800470'}]}
+2026-01-21 16:10:00,919 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011800715'}]}
+2026-01-21 16:10:01,095 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011800929'}]}
+2026-01-21 16:10:01,371 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011801138'}]}
+2026-01-21 16:10:01,578 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011801383'}]}
+2026-01-21 16:10:01,765 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011801586'}]}
+2026-01-21 16:10:09,904 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011809738'}]}
+2026-01-21 16:10:10,110 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011809933'}]}
+2026-01-21 16:10:10,293 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011810119'}]}
+2026-01-21 16:10:10,580 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011810383'}]}
+2026-01-21 16:10:10,750 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011810593'}]}
+2026-01-21 16:10:10,934 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011810757'}]}
+2026-01-21 16:10:11,127 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011810946'}]}
+2026-01-21 16:10:11,292 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011811135'}]}
+2026-01-21 16:10:11,426 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011811301'}]}
+2026-01-21 16:10:20,062 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011819825'}]}
+2026-01-21 16:10:20,237 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011820068'}]}
+2026-01-21 16:10:20,412 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011820245'}]}
+2026-01-21 16:10:20,755 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011820536'}]}
+2026-01-21 16:10:20,940 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011820768'}]}
+2026-01-21 16:10:21,137 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011820961'}]}
+2026-01-21 16:10:21,413 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011821214'}]}
+2026-01-21 16:10:21,579 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011821418'}]}
+2026-01-21 16:10:21,795 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011821629'}]}
+2026-01-21 16:10:30,538 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011829778'}]}
+2026-01-21 16:10:30,918 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011830550'}]}
+2026-01-21 16:10:31,320 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011830920'}]}
+2026-01-21 16:10:31,422 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011831322'}]}
+2026-01-21 16:10:31,558 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011831424'}]}
+2026-01-21 16:10:31,663 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011831561'}]}
+2026-01-21 16:10:31,763 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011831666'}]}
+2026-01-21 16:10:31,886 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011831766'}]}
+2026-01-21 16:10:31,994 | WARNING | VK API error: {'error_code': 9, 'error_msg': 'Flood control: too much messages sent to user', 'request_params': [{'key': 'method', 'value': 'messages.send'}, {'key': 'oauth', 'value': '1'}, {'key': 'message', 'value': '*******'}, {'key': 'v', 'value': '5.199'}, {'key': 'user_id', 'value': '183594998'}, {'key': 'random_id', 'value': '1769011831889'}]}

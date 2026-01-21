@@ -3,9 +3,9 @@ spring:
     name: team6
 
   datasource:
-    url: ${DATABASE_URL}
-    username: ${DATABASE_USERNAME}
-    password: ${DATABASE_PASSWORD}
+    url: jdbc:postgresql://postgres_db:5432/postgres
+    username: user
+    password: user
     driver-class-name: org.postgresql.Driver
 
   jpa:
@@ -13,15 +13,18 @@ spring:
       ddl-auto: update
 
   rabbitmq:
-    host: ${RABBIT_HOST:localhost}
-    port: ${RABBIT_PORT:5672}
-    username: ${RABBIT_USERNAME:guest}
-    password: ${RABBIT_PASSWORD:guest}
+    host: rabbitmq
+    port: 5672
+    username: user
+    password: user
 
 encryption:
-  master-password: ${MASTER_PASSWORD}
-  salt: ${SALT}
+  master-password: root
+  salt: 5c0744943158e114
   jwt-key: ${JWT_KEY:mySuperSecretKeyThatIsAtLeast32CharactersLong123!}
 
 springdoc:
   override-with-generic-response: false
+
+server:
+  port: 8081
