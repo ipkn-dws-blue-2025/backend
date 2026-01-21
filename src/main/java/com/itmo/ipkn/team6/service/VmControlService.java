@@ -28,6 +28,7 @@ public class VmControlService {
     private final VkCloudTokenJpaRepository vkCloudTokenJpaRepository;
     private final VmControlApiClient vmControlApiClient;
     private final ServiceEncrypt serviceEncrypt;
+    private final VmMockDataService vmMockDataService;
 
 
     public void shutoffVm(Long userId, String vmId) {
@@ -35,6 +36,13 @@ public class VmControlService {
         String encryptedToken = getToken(userId);
 
         String token = serviceEncrypt.decrypt(encryptedToken);
+
+        if(token.equals("00000")){
+
+            vmMockDataService.shutoffVm(vmId);
+            return;
+
+        }
 
         Map<String, Object> body = new HashMap<>();
         body.put("os-stop", null);
@@ -49,6 +57,13 @@ public class VmControlService {
         String encryptedToken = getToken(userId);
 
         String token = serviceEncrypt.decrypt(encryptedToken);
+
+        if(token.equals("00000")){
+
+            vmMockDataService.activeVm(vmId);
+            return;
+
+        }
 
         Map<String, Object> body = new HashMap<>();
         body.put("os-start", null);
