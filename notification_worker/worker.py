@@ -2,13 +2,15 @@ import json
 import logging
 import os
 import time
-from typing import Any, Dict, Optional
+from typing import Any, Dict, Optional, Tuple
 
 import pika
 import requests
 
 
 VK_API_BASE_URL = "https://api.vk.com/method/"
+DEDUP_TTL_SECONDS = 3600
+_dedup_cache: Dict[Tuple[str, str], float] = {}
 
 
 def setup_logger(log_file: str) -> logging.Logger:
@@ -135,6 +137,7 @@ def handle_message(
         return
 
     user_id = payload.get("userId") or payload.get("user_id")
+    metric = payload.get("metric") or payload.get("metricType")
     peer_id = payload.get("peerId") or payload.get("peer_id")
     random_id = payload.get("randomId") or payload.get("random_id")
     message_text = build_message_text(payload)
@@ -143,6 +146,22 @@ def handle_message(
         logger.error("Message missing user_id/peer_id or text: %s", payload)
         ch.basic_ack(delivery_tag=method.delivery_tag)
         return
+
+    cache_key_user = str(user_id) if user_id is not None else str(peer_id)
+    cache_key_metric = str(metric) if metric else "unknown_metric"
+    cache_key = (cache_key_user, cache_key_metric)
+    now_ts = time.time()
+    last_sent = _dedup_cache.get(cache_key)
+    if last_sent and (now_ts - last_sent) < DEDUP_TTL_SECONDS:
+        logger.info("Skip notification due to TTL dedup: key=%s", cache_key)
+        ch.basic_ack(delivery_tag=method.delivery_tag)
+        return
+
+    # Cleanup expired cache entries opportunistically.
+    if len(_dedup_cache) > 0:
+        expired_keys = [key for key, ts in _dedup_cache.items() if (now_ts - ts) >= DEDUP_TTL_SECONDS]
+        for key in expired_keys:
+            _dedup_cache.pop(key, None)
 
     try:
         response = send_vk_notification(
@@ -172,6 +191,8 @@ def handle_message(
         return
 
     logger.info("Notification delivered via %s to user_id=%s", vk_method, user_id or peer_id)
+    if not last_sent or (now_ts - last_sent) >= DEDUP_TTL_SECONDS:
+        _dedup_cache[cache_key] = now_ts
     ch.basic_ack(delivery_tag=method.delivery_tag)
 
 
