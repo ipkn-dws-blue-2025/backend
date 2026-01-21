@@ -34,15 +34,15 @@ public class ThresholdSettingUserService {
     }
 
     @Transactional
-    public void createSettingsForUser(long userId, ThresholdSettingsRequest thresholdSettingsRequest) {
+    public void createSettingsForUser(long userId, String vmId, String projectId, String namespace, ThresholdSettingsRequest thresholdSettingsRequest) {
         List<ThresholdSetting> thresholdSettingList = thresholdSettingsRequest.getSettings().stream()
-                .map(it -> mapDtoToEntity(userId, it))
+                .map(it -> mapDtoToEntity(userId, vmId, projectId, namespace, it))
                 .toList();
         thresholdSettingRepository.saveAll(thresholdSettingList);
     }
 
     @Transactional
-    public void changeSettingsForUser(long userId, ThresholdSettingsRequest thresholdSettingsRequest) {
+    public void changeSettingsForUser(long userId, String vmId, String projectId, String namespace, ThresholdSettingsRequest thresholdSettingsRequest) {
         List<ThresholdSetting> existingSettings = thresholdSettingRepository.findAllByUserId(userId);
 
         for (var dto : thresholdSettingsRequest.getSettings()) {
@@ -52,23 +52,33 @@ public class ThresholdSettingUserService {
                     .ifPresentOrElse(
                             entity -> entity.setThresholdValue(dto.getThresholdValue()),
                             () -> {
-                                ThresholdSetting newSetting = mapDtoToEntity(userId, dto);
+                                ThresholdSetting newSetting = mapDtoToEntity(userId, vmId, projectId, namespace, dto);
                                 thresholdSettingRepository.save(newSetting);
                             }
                     );
         }
     }
 
-    private ThresholdSetting mapDtoToEntity(long userId, ThresholdSettingsRequest.Setting settingDto) {
+    private ThresholdSetting mapDtoToEntity(long userId, String vmId, String projectId, String namespace, ThresholdSettingsRequest.Setting settingDto) {
         ThresholdSetting thresholdSetting = new ThresholdSetting();
 
         thresholdSetting.setMetricType(settingDto.getMetricType());
         thresholdSetting.setThresholdValue(settingDto.getThresholdValue());
+        thresholdSetting.setVmId(vmId);
+        thresholdSetting.setProjectId(projectId);
+        thresholdSetting.setNamespace(namespace);
 
         User user = new User();
         user.setId(userId);
-        thresholdSetting.setUser(user);
+        thresholdSetting.setUserId(userId);
 
         return thresholdSetting;
+    }
+
+    @Transactional
+    public void deleteSettingsForUser(long userId, List<Long> idsToDelete) {
+        for (Long id : idsToDelete) {
+            thresholdSettingRepository.deleteAllByUserIdAndId(userId, id);
+        }
     }
 }

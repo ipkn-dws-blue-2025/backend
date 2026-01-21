@@ -24,7 +24,27 @@ public class ThresholdSetting {
     @Column(nullable = false)
     private String thresholdValue;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id")
-    private User user;
+    @Column(nullable = false)
+    private String vmId;
+
+    @Column(nullable = false)
+    private String projectId;
+
+    @Column(nullable = false)
+    private String namespace;
+
+    @Column(nullable = false)
+    private Long userId;
+
+    @Override
+    public String toString() {
+        return "ThresholdSetting{\n" +
+                "\tid=" + id + ",\n"+
+                "\tmetricType=" + metricType + ",\n"+
+                "\tthresholdValue='" + thresholdValue + ",\n"+
+                "\tvmId='" + vmId + ",\n"+
+                "\tprojectId='" + projectId + ",\n"+
+                "\tnamespace='" + namespace + ",\n"+
+                '}';
+    }
 }

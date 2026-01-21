@@ -2,6 +2,7 @@ package com.itmo.ipkn.team6.client;
 
 import com.itmo.ipkn.team6.dto.rest.VmMonitoringResponse;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestHeader;
@@ -13,11 +14,11 @@ import java.time.LocalDateTime;
 public interface VmMonitoringCloudApiClient {
 
     @GetMapping("/{projectId}/query")
-    VmMonitoringResponse getForInstantUsage(
+    ResponseEntity<VmMonitoringResponse> getForInstantUsage(
             @RequestHeader("X-Auth-Token") String token,
             @PathVariable String projectId,
-            @RequestParam String query,
-            @RequestParam String nameSpace
+            @RequestParam("query") String query,
+            @RequestParam("namespace") String nameSpace
     );
 
     @GetMapping("/{projectId}/query_range")

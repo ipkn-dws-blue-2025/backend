@@ -18,7 +18,7 @@ public class VkCloudToken {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "encrypted_token", columnDefinition = "TEXT")
+    @Column(name = "encrypted_token", columnDefinition = "TEXT", length = 1000)
     private String encryptedAdminToken;
 
     @Column(name = "user_id")

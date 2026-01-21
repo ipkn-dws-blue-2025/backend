@@ -2,6 +2,7 @@ package com.itmo.ipkn.team6.controller;
 
 import com.itmo.ipkn.team6.exception.dto.ErrorDto;
 import com.itmo.ipkn.team6.service.TokenService;
+import com.itmo.ipkn.team6.util.Constants;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/itmo/ipkn/team6/token")
+@RequestMapping(Constants.Controller.TOKEN_API)
 @Tag(name = "API для работы с токеном")
 public class TokenController {
 
@@ -46,9 +47,7 @@ public class TokenController {
     @PostMapping("/add-token-admin")
     @ResponseStatus(HttpStatus.CREATED)
     public void addTokenForAdmin(@RequestHeader("X-User-Id") Long userId, @RequestHeader("Token") String token) {
-
         tokenService.addTokenAdmin(userId, token);
-
     }
 
     @Operation(
@@ -85,11 +84,8 @@ public class TokenController {
     @PostMapping("/add-token-operator")
     @ResponseStatus(HttpStatus.CREATED)
     public void addTokenForOperator(@RequestHeader("X-User-Id") Long userId, @RequestHeader("Jwt-Token") String jwtToken) {
-
         tokenService.addTokenOperator(userId, jwtToken);
-
     }
-
 
     @Operation(
             summary = "Создание токена для оператора.",
@@ -117,9 +113,6 @@ public class TokenController {
     )
     @PostMapping("/create-token-operator")
     public String createTokenForOperator(@RequestHeader("X-User-Id") Long userId) {
-
         return tokenService.createTokenForOperator(userId);
-
     }
-
 }
