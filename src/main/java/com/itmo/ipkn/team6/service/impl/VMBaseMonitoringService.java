@@ -41,11 +41,9 @@ public class VMBaseMonitoringService implements MetricsChecker {
 
     @Override
     public void checkMetric(MetricThresholdType metric, Long userId) {
-        log.info("checkMetric start: userId={}, metric={}", userId, metric);
         VkCloudToken cloudToken = vkCloudTokenJpaRepository.findByUserId(userId).orElseThrow(() -> new NotFoundToken("Ваш токен для Vk Cloud не найден. Пожалуйста, добавьте токен."));
 
         List<ThresholdSetting> userSettings = thresholdSettingRepository.findAllByUserIdAndMetricType(userId, metric);
-        log.info("Found {} settings for userId={}, metric={}", userSettings.size(), userId, metric);
         ThresholdSetting randomSetting = userSettings.stream().findFirst().orElse(null);
 
         if (randomSetting != null) {
@@ -58,21 +56,12 @@ public class VMBaseMonitoringService implements MetricsChecker {
                     String.format(metric.getPattern(), randomSetting.getVmId()),
                     randomSetting.getNamespace()
             );
-            log.info("Instant usage response status: {}", responseResponseEntity.getStatusCode());
             if (responseResponseEntity.getStatusCode().is2xxSuccessful()) {
                 VmMonitoringResponse instantUsage = responseResponseEntity.getBody();
-                if (instantUsage == null) {
-                    log.warn("Instant usage response body is null for userId={}, metric={}", userId, metric);
-                    return;
-                }
 
                 log.info("Compare settings to instant values for user: {}, for metric type: {}", userId, metric);
                 for (VmMonitoringResponse.ResultItem resultItem : instantUsage.getData().getResult()) {
                     List<String> list = resultItem.getValue();
-                    if (list == null || list.size() < 2) {
-                        log.warn("Instant usage value list is invalid: {}", list);
-                        continue;
-                    }
                     String timestamp = list.get(0);
                     String instantValue = list.get(1);
                     Optional<ThresholdSetting> thresholdSetting = userSettings.stream()
@@ -98,15 +87,11 @@ public class VMBaseMonitoringService implements MetricsChecker {
                         } else {
                             log.info("No need to send any notifications");
                         }
-                    } else {
-                        log.warn("Threshold setting not found after lookup for userId={}, metric={}", userId, metric);
                     }
                 }
             } else {
                 log.warn("VK CLOUD TOKEN IS SPOILED FOR USER: {}", userId);
             }
-        } else {
-            log.info("No settings found for userId={}, metric={}", userId, metric);
         }
     }
 
