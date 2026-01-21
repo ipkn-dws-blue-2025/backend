@@ -61,6 +61,8 @@ services:
       RABBIT_USERNAME: ${RABBIT_USER}
       RABBIT_PASSWORD: ${RABBIT_PASS}
       RABBIT_QUEUE: notification_queue
+      VK_API_METHOD: messages.send
+      VK_GROUP_TOKEN: ${VK_GROUP_TOKEN}
       VK_SERVICE_TOKEN: ${VK_SERVICE_TOKEN}
       LOG_FILE: /app/logs/notification_worker.log
     depends_on:

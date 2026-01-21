@@ -8,7 +8,7 @@ import pika
 import requests
 
 
-VK_API_URL = "https://api.vk.com/method/notifications.sendMessage"
+VK_API_BASE_URL = "https://api.vk.com/method/"
 
 
 def setup_logger(log_file: str) -> logging.Logger:
@@ -73,20 +73,36 @@ def build_message_text(payload: Dict[str, Any]) -> Optional[str]:
 
 
 def send_vk_notification(
-    user_id: str,
+    method: str,
+    user_id: Optional[str],
     message: str,
     token: str,
     api_version: str,
     logger: logging.Logger,
+    peer_id: Optional[str] = None,
+    random_id: Optional[str] = None,
 ) -> Dict[str, Any]:
+    url = f"{VK_API_BASE_URL}{method}"
+    payload: Dict[str, Any] = {
+        "message": message,
+        "access_token": token,
+        "v": api_version,
+    }
+
+    if method == "messages.send":
+        if user_id and not peer_id:
+            payload["user_id"] = user_id
+        if peer_id:
+            payload["peer_id"] = peer_id
+        payload["random_id"] = random_id or str(int(time.time() * 1000))
+    else:
+        if user_id:
+            payload["user_ids"] = user_id
+
+    payload = {key: value for key, value in payload.items() if value is not None}
     response = requests.post(
-        VK_API_URL,
-        data={
-            "user_ids": user_id,
-            "message": message,
-            "access_token": token,
-            "v": api_version,
-        },
+        url,
+        data=payload,
         timeout=10,
     )
 
@@ -108,6 +124,7 @@ def handle_message(
     body: bytes,
     token: str,
     api_version: str,
+    vk_method: str,
     logger: logging.Logger,
 ) -> None:
     try:
@@ -118,20 +135,25 @@ def handle_message(
         return
 
     user_id = payload.get("userId") or payload.get("user_id")
+    peer_id = payload.get("peerId") or payload.get("peer_id")
+    random_id = payload.get("randomId") or payload.get("random_id")
     message_text = build_message_text(payload)
 
-    if not user_id or not message_text:
-        logger.error("Message missing user_id or text: %s", payload)
+    if not (user_id or peer_id) or not message_text:
+        logger.error("Message missing user_id/peer_id or text: %s", payload)
         ch.basic_ack(delivery_tag=method.delivery_tag)
         return
 
     try:
         response = send_vk_notification(
-            user_id=str(user_id),
+            method=vk_method,
+            user_id=str(user_id) if user_id is not None else None,
             message=message_text,
             token=token,
             api_version=api_version,
             logger=logger,
+            peer_id=str(peer_id) if peer_id else None,
+            random_id=str(random_id) if random_id else None,
         )
     except requests.RequestException as exc:
         logger.error("VK request failed, will retry: %s", exc)
@@ -149,7 +171,7 @@ def handle_message(
             ch.basic_ack(delivery_tag=method.delivery_tag)
         return
 
-    logger.info("Notification delivered to user_id=%s", user_id)
+    logger.info("Notification delivered via %s to user_id=%s", vk_method, user_id or peer_id)
     ch.basic_ack(delivery_tag=method.delivery_tag)
 
 
@@ -160,14 +182,15 @@ def main() -> None:
     rabbit_password = os.getenv("RABBIT_PASSWORD", "guest")
     rabbit_queue = os.getenv("RABBIT_QUEUE", "notification_queue")
 
-    vk_token = os.getenv("VK_SERVICE_TOKEN")
+    vk_method = os.getenv("VK_API_METHOD", "messages.send")
+    vk_token = os.getenv("VK_ACCESS_TOKEN") or os.getenv("VK_GROUP_TOKEN") or os.getenv("VK_SERVICE_TOKEN")
     vk_api_version = os.getenv("VK_API_VERSION", "5.199")
 
     log_file = os.getenv("LOG_FILE", "logs/notification_worker.log")
     logger = setup_logger(log_file)
 
     if not vk_token:
-        logger.error("VK_SERVICE_TOKEN is not set, exiting.")
+        logger.error("VK_ACCESS_TOKEN or VK_GROUP_TOKEN is not set, exiting.")
         raise SystemExit(1)
 
     credentials = pika.PlainCredentials(rabbit_user, rabbit_password)
@@ -185,7 +208,7 @@ def main() -> None:
     channel.queue_declare(queue=rabbit_queue, durable=True)
     channel.basic_qos(prefetch_count=1)
 
-    logger.info("Consuming queue '%s'", rabbit_queue)
+    logger.info("Consuming queue '%s' with VK method '%s'", rabbit_queue, vk_method)
 
     def on_message(
         ch: pika.channel.Channel,
@@ -193,7 +216,7 @@ def main() -> None:
         properties: pika.spec.BasicProperties,
         body: bytes,
     ) -> None:
-        handle_message(ch, method, body, vk_token, vk_api_version, logger)
+        handle_message(ch, method, body, vk_token, vk_api_version, vk_method, logger)
 
     channel.basic_consume(queue=rabbit_queue, on_message_callback=on_message, auto_ack=False)
 
