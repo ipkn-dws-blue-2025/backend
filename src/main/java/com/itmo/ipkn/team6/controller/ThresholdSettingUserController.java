@@ -48,4 +48,13 @@ public class ThresholdSettingUserController {
         thresholdSettingUserService.changeSettingsForUser(userId, vmId, projectId, namespace, thresholdSettingsRequest);
         return ResponseEntity.ok().build();
     }
+
+    @DeleteMapping("/")
+    public ResponseEntity<Void> deleteSettingsForUser(
+            @RequestHeader("X-User-Id") Long userId,
+            @RequestBody List<Long> idsToDelete
+    ) {
+        thresholdSettingUserService.deleteSettingsForUser(userId, idsToDelete);
+        return ResponseEntity.ok().build();
+    }
 }

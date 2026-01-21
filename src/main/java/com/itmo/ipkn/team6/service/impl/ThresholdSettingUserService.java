@@ -74,4 +74,11 @@ public class ThresholdSettingUserService {
 
         return thresholdSetting;
     }
+
+    @Transactional
+    public void deleteSettingsForUser(long userId, List<Long> idsToDelete) {
+        for (Long id : idsToDelete) {
+            thresholdSettingRepository.deleteAllByUserIdAndId(userId, id);
+        }
+    }
 }

@@ -19,6 +19,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 
@@ -71,7 +72,9 @@ public class VMBaseMonitoringService implements MetricsChecker {
                         String userValue = thresholdSetting.get().getThresholdValue();
                         log.info("User value: {}", userValue);
                         log.info("Instant value: {}", instantValue);
-                        if (userValue.compareTo(instantValue) > 0) {
+                        BigDecimal userBigDecimal = new BigDecimal(userValue);
+                        BigDecimal instantBigDecimal = new BigDecimal(instantValue);
+                        if (instantBigDecimal.compareTo(userBigDecimal) > 0) {
                             String notificationMessage = createNotificationMessage(
                                     userId, instantValue, Long.parseLong(timestamp), userValue, metric
                             );

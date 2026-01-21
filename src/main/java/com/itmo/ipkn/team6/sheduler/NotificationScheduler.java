@@ -29,6 +29,9 @@ public class NotificationScheduler {
         List<Long> users = thresholdSettingRepository.findAll().stream()
                 .map(ThresholdSetting::getUserId)
                 .toList();
+        if (users.isEmpty()) {
+            log.info("There are no settings");
+        }
         for (Long userId : users) {
             log.info("For user: {}", userId);
             for (MetricThresholdType metricThresholdType : MetricThresholdType.values()) {

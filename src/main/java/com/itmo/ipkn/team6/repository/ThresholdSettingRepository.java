@@ -12,4 +12,6 @@ public interface ThresholdSettingRepository extends JpaRepository<ThresholdSetti
 
     List<ThresholdSetting> findAllByUserIdAndMetricType(Long userId, MetricThresholdType metricType);
     List<ThresholdSetting> findAllByUserId(Long userId);
+
+    void deleteAllByUserIdAndId(Long userId, Long id);
 }
