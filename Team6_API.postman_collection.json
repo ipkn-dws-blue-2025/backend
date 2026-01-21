@@ -1,0 +1,353 @@
+{
+	"info": {
+		"_postman_id": "team6-api-collection",
+		"name": "Team6 VK Cloud API",
+		"description": "Коллекция для тестирования API управления ВМ в VK Cloud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Token Management",
+			"item": [
+				{
+					"name": "Add VK Cloud Token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-User-Id",
+								"value": "1",
+								"type": "text",
+								"description": "ID пользователя"
+							},
+							{
+								"key": "Token",
+								"value": "{{vk_cloud_token}}",
+								"type": "text",
+								"description": "Токен VK Cloud (замените на свой)"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/itmo/ipkn/team6/token/add",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"itmo",
+								"ipkn",
+								"team6",
+								"token",
+								"add"
+							]
+						},
+						"description": "Добавляет токен VK Cloud для пользователя. Используйте свой токен из Postman или VK Cloud консоли."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "VM Monitoring",
+			"item": [
+				{
+					"name": "Get List of VMs",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-User-Id",
+								"value": "1",
+								"type": "text",
+								"description": "ID пользователя"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/itmo/ipkn/team6/api/monitoring/get-list-vms",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"itmo",
+								"ipkn",
+								"team6",
+								"api",
+								"monitoring",
+								"get-list-vms"
+							]
+						},
+						"description": "Получает список всех виртуальных машин пользователя из VK Cloud"
+					},
+					"response": []
+				},
+				{
+					"name": "Get VM Metrics",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-User-Id",
+								"value": "1",
+								"type": "text",
+								"description": "ID пользователя"
+							},
+							{
+								"key": "Project-Id",
+								"value": "{{project_id}}",
+								"type": "text",
+								"description": "ID проекта в VK Cloud (получите из списка ВМ)"
+							},
+							{
+								"key": "Vm-Id",
+								"value": "{{vm_id}}",
+								"type": "text",
+								"description": "ID виртуальной машины (получите из списка ВМ)"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/itmo/ipkn/team6/api/monitoring/get-vm-metric",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"itmo",
+								"ipkn",
+								"team6",
+								"api",
+								"monitoring",
+								"get-vm-metric"
+							]
+						},
+						"description": "Получает метрики по ВМ: CPU, RAM, Disk usage"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "VM Control",
+			"item": [
+				{
+					"name": "Start VM",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-User-Id",
+								"value": "1",
+								"type": "text",
+								"description": "ID пользователя"
+							},
+							{
+								"key": "Vm-Id",
+								"value": "{{vm_id}}",
+								"type": "text",
+								"description": "ID виртуальной машины"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/itmo/ipkn/team6/api/control/activeVm",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"itmo",
+								"ipkn",
+								"team6",
+								"api",
+								"control",
+								"activeVm"
+							]
+						},
+						"description": "Включает остановленную ВМ в VK Cloud"
+					},
+					"response": []
+				},
+				{
+					"name": "Stop VM",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-User-Id",
+								"value": "1",
+								"type": "text",
+								"description": "ID пользователя"
+							},
+							{
+								"key": "Vm-Id",
+								"value": "{{vm_id}}",
+								"type": "text",
+								"description": "ID виртуальной машины"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/itmo/ipkn/team6/api/control/shutoffVm",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"itmo",
+								"ipkn",
+								"team6",
+								"api",
+								"control",
+								"shutoffVm"
+							]
+						},
+						"description": "Останавливает работу ВМ в VK Cloud"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Threshold Settings",
+			"item": [
+				{
+					"name": "Get Threshold Settings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/itmo/ipkn/team6/api/threshold-setting/{{user_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"itmo",
+								"ipkn",
+								"team6",
+								"api",
+								"threshold-setting",
+								"{{user_id}}"
+							]
+						},
+						"description": "Получает настройки порогов для пользователя"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Threshold Settings",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"settings\": [\n    {\n      \"metricType\": \"CPU\",\n      \"thresholdValue\": \"80.0\"\n    },\n    {\n      \"metricType\": \"RAM\",\n      \"thresholdValue\": \"85.0\"\n    },\n    {\n      \"metricType\": \"DISK_READ\",\n      \"thresholdValue\": \"1000000\"\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/itmo/ipkn/team6/api/threshold-setting/{{user_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"itmo",
+								"ipkn",
+								"team6",
+								"api",
+								"threshold-setting",
+								"{{user_id}}"
+							]
+						},
+						"description": "Создает настройки порогов для пользователя. Доступные типы метрик: CPU, RAM, DISK_READ, DISK_WRITE, NETWORK_SEND, NETWORK_RECEIVE"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Threshold Settings",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"settings\": [\n    {\n      \"id\": 1,\n      \"metricType\": \"CPU\",\n      \"thresholdValue\": \"90.0\"\n    },\n    {\n      \"id\": 2,\n      \"metricType\": \"RAM\",\n      \"thresholdValue\": \"90.0\"\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/itmo/ipkn/team6/api/threshold-setting/{{user_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"itmo",
+								"ipkn",
+								"team6",
+								"api",
+								"threshold-setting",
+								"{{user_id}}"
+							]
+						},
+						"description": "Обновляет настройки порогов для пользователя. Необходимо указать id существующих настроек."
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8080",
+			"type": "string"
+		},
+		{
+			"key": "user_id",
+			"value": "1",
+			"type": "string"
+		},
+		{
+			"key": "vk_cloud_token",
+			"value": "YOUR_VK_CLOUD_TOKEN_HERE",
+			"type": "string",
+			"description": "Замените на свой токен VK Cloud"
+		},
+		{
+			"key": "vm_id",
+			"value": "",
+			"type": "string",
+			"description": "ID виртуальной машины (получите из списка ВМ)"
+		},
+		{
+			"key": "project_id",
+			"value": "",
+			"type": "string",
+			"description": "ID проекта в VK Cloud (получите из списка ВМ)"
+		}
+	]
+}
