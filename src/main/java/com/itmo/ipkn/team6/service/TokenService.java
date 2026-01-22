@@ -20,6 +20,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
@@ -42,6 +43,7 @@ public class TokenService {
     @Value("${encryption.jwt-key}")
     private String jwtKey;
 
+    @Transactional
     public void addTokenAdmin(Long userId, String token) {
 
         removeOperatorTokenForUser(userId);
@@ -93,6 +95,7 @@ public class TokenService {
     }
 
 
+    @Transactional
     public void addTokenOperator(Long userId, String jwtToken) {
 
         try {
@@ -149,6 +152,7 @@ public class TokenService {
 
     }
 
+    @Transactional(readOnly = true)
     public TokenStatusResponse getTokenStatus(Long userId) {
 
         Optional<VkCloudToken> vkCloudToken = vkCloudTokenJpaRepository.findByUserId(userId);
