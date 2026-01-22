@@ -9,4 +9,6 @@ public interface OperatorTokenJpaRepository extends JpaRepository<OperatorToken,
 
     Optional<OperatorToken> findByOperatorUserId(Long operatorUserId);
 
+    void deleteByOperatorUserId(Long operatorUserId);
+
 }

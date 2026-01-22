@@ -67,6 +67,7 @@ class TokenServiceTest {
         tokenService.addTokenAdmin(USER_ID, PLAIN_TOKEN);
 
         //THEN
+        verify(operatorTokenJpaRepository).deleteByOperatorUserId(USER_ID);
         verify(vkCloudTokenJpaRepository).findByUserId(USER_ID);
         verify(serviceEncrypt).encrypt(PLAIN_TOKEN);
         verify(vkCloudTokenJpaRepository).save(argThat(token -> token.getUserId().equals(USER_ID) && token.getEncryptedAdminToken().equals(ENCRYPTED_TOKEN)));
@@ -90,6 +91,7 @@ class TokenServiceTest {
         tokenService.addTokenAdmin(USER_ID, PLAIN_TOKEN);
 
         //THEN
+        verify(operatorTokenJpaRepository).deleteByOperatorUserId(USER_ID);
         verify(vkCloudTokenJpaRepository).findByUserId(USER_ID);
         verify(serviceEncrypt).decrypt(OLD_ENCRYPTED_TOKEN);
         verify(serviceEncrypt).encrypt(PLAIN_TOKEN);

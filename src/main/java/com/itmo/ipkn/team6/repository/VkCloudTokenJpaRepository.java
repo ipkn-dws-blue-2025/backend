@@ -13,4 +13,6 @@ public interface VkCloudTokenJpaRepository extends JpaRepository<VkCloudToken, L
 
     Optional<VkCloudToken> findByUserId(Long userId);
 
+    void deleteByUserId(Long userId);
+
 }

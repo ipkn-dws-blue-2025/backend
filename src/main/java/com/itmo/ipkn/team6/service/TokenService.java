@@ -2,6 +2,8 @@ package com.itmo.ipkn.team6.service;
 
 import com.itmo.ipkn.team6.exception.InvalidJwtTokenException;
 import com.itmo.ipkn.team6.exception.NotFoundToken;
+import com.itmo.ipkn.team6.dto.rest.TokenRole;
+import com.itmo.ipkn.team6.dto.rest.TokenStatusResponse;
 import com.itmo.ipkn.team6.model.OperatorToken;
 import com.itmo.ipkn.team6.model.VkCloudToken;
 import com.itmo.ipkn.team6.repository.OperatorTokenJpaRepository;
@@ -41,6 +43,8 @@ public class TokenService {
     private String jwtKey;
 
     public void addTokenAdmin(Long userId, String token) {
+
+        removeOperatorTokenForUser(userId);
 
         Optional<VkCloudToken> optionalVkCloudToken = vkCloudTokenJpaRepository.findByUserId(userId);
 
@@ -104,6 +108,7 @@ public class TokenService {
 
             vkCloudTokenJpaRepository.findByUserId(adminId).orElseThrow(() -> new NotFoundToken("Администратора, который выдал вам токен, не существует в системе."));
 
+            removeAdminTokenForUser(userId);
 
             Optional<OperatorToken> optionalOperatorJwtToken = operatorTokenJpaRepository.findByOperatorUserId(userId);
 
@@ -144,5 +149,42 @@ public class TokenService {
 
     }
 
+    public TokenStatusResponse getTokenStatus(Long userId) {
+
+        Optional<VkCloudToken> vkCloudToken = vkCloudTokenJpaRepository.findByUserId(userId);
+
+        if (vkCloudToken.isPresent()) {
+            return new TokenStatusResponse(true, true, TokenRole.ADMIN);
+        }
+
+        Optional<OperatorToken> operatorToken = operatorTokenJpaRepository.findByOperatorUserId(userId);
+
+        if (operatorToken.isEmpty()) {
+            return new TokenStatusResponse(false, false, TokenRole.NONE);
+        }
+
+        boolean isValid = isOperatorTokenValid(operatorToken.get().getJwtToken());
+        return new TokenStatusResponse(true, isValid, TokenRole.OPERATOR);
+    }
+
+    private boolean isOperatorTokenValid(String jwtToken) {
+        try {
+            Jwts.parser()
+                    .verifyWith(Keys.hmacShaKeyFor(jwtKey.getBytes(StandardCharsets.UTF_8)))
+                    .build()
+                    .parseSignedClaims(jwtToken);
+            return true;
+        } catch (JwtException e) {
+            return false;
+        }
+    }
+
+    private void removeAdminTokenForUser(Long userId) {
+        vkCloudTokenJpaRepository.deleteByUserId(userId);
+    }
+
+    private void removeOperatorTokenForUser(Long userId) {
+        operatorTokenJpaRepository.deleteByOperatorUserId(userId);
+    }
 
 }

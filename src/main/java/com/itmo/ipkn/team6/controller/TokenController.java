@@ -1,5 +1,6 @@
 package com.itmo.ipkn.team6.controller;
 
+import com.itmo.ipkn.team6.dto.rest.TokenStatusResponse;
 import com.itmo.ipkn.team6.exception.dto.ErrorDto;
 import com.itmo.ipkn.team6.service.TokenService;
 import com.itmo.ipkn.team6.util.Constants;
@@ -85,6 +86,35 @@ public class TokenController {
     @ResponseStatus(HttpStatus.CREATED)
     public void addTokenForOperator(@RequestHeader("X-User-Id") Long userId, @RequestHeader("Jwt-Token") String jwtToken) {
         tokenService.addTokenOperator(userId, jwtToken);
+    }
+
+    @Operation(
+            summary = "Статус токена пользователя.",
+            description = """
+                                        \s
+                     ### Описание:
+                     
+                     Возвращает информацию о наличии токена, его валидности и роли для указанного пользователя.
+
+                    \s""",
+            responses = {
+                    @ApiResponse(
+                            responseCode = "200",
+                            description = "Статус токена получен.",
+                            content = @Content(schema = @Schema(implementation = TokenStatusResponse.class))
+                    ),
+                    @ApiResponse(
+                            responseCode = "500",
+                            description = "Внутренняя ошибка сервера.",
+                            content = @Content(
+                                    schema = @Schema(implementation = ErrorDto.class)
+                            )
+                    )
+            }
+    )
+    @GetMapping("/status/{userId}")
+    public TokenStatusResponse getTokenStatus(@PathVariable Long userId) {
+        return tokenService.getTokenStatus(userId);
     }
 
     @Operation(
