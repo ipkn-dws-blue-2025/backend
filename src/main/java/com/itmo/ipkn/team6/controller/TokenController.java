@@ -118,6 +118,36 @@ public class TokenController {
     }
 
     @Operation(
+            summary = "Удалить токен пользователя.",
+            description = """
+                                        \s
+                     ### Описание:
+                     
+                     Удаляет токен пользователя независимо от роли.
+
+                    \s""",
+            responses = {
+                    @ApiResponse(
+                            responseCode = "204",
+                            description = "Токен пользователя удалён.",
+                            content = @Content
+                    ),
+                    @ApiResponse(
+                            responseCode = "500",
+                            description = "Внутренняя ошибка сервера.",
+                            content = @Content(
+                                    schema = @Schema(implementation = ErrorDto.class)
+                            )
+                    )
+            }
+    )
+    @DeleteMapping("/delete-token/{userId}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteTokenForUser(@PathVariable Long userId) {
+        tokenService.deleteTokenForUser(userId);
+    }
+
+    @Operation(
             summary = "Создание токена для оператора.",
             description = """
                                         \s

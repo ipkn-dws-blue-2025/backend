@@ -171,6 +171,12 @@ public class TokenService {
         return new TokenStatusResponse(true, isValid, TokenRole.OPERATOR);
     }
 
+    @Transactional
+    public void deleteTokenForUser(Long userId) {
+        removeAdminTokenForUser(userId);
+        removeOperatorTokenForUser(userId);
+    }
+
     private boolean isOperatorTokenValid(String jwtToken) {
         try {
             Jwts.parser()
